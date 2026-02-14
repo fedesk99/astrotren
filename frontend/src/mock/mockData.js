@@ -93,43 +93,43 @@ export const gallery = [
   },
   {
     id: 2,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/bxmh9gvp_IMG_4907_edited.jpg",
-    alt: "Astrotrén - Guitarrista en vivo",
+    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/os2yk54e_IMG_4898_edited.jpg",
+    alt: "Astrotrén - Cris",
   },
   {
     id: 3,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/os2yk54e_IMG_4898_edited.jpg",
-    alt: "Astrotrén - Vocalista en vivo",
+    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/bxmh9gvp_IMG_4907_edited.jpg",
+    alt: "Astrotrén - Fede",
   },
   {
     id: 4,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/o953pp5i_IMG_4922_edited.jpg",
-    alt: "Astrotrén - Bajista en vivo",
+    alt: "Astrotrén - Luc",
   },
   {
     id: 5,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/lsw0glyo_IMG_4939_edited.jpg",
-    alt: "Astrotrén - Baterista en vivo",
+    alt: "Astrotrén - Canos Tento",
   },
   {
     id: 6,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/o7c78o0o_IMG_5042_edited.jpg",
-    alt: "Astrotrén - Banda completa en vivo",
+    alt: "Astrotrén en vivo en Planta Alta",
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1578906007133-ed3603c8c5c2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxnb3RoaWMlMjBtZXRhbCUyMGNvbmNlcnR8ZW58MHx8fHwxNzcxMDIxMjEzfDA&ixlib=rb-4.1.0&q=85",
-    alt: "Concierto en vivo",
+    imagen: '/Images/IMG_2767.HEIC.jpeg',
+    alt: " ",
   },
   {
     id: 8,
-    url: "https://images.unsplash.com/photo-1542577731-7f6eabdf59ef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHw0fHxnb3RoaWMlMjBtZXRhbCUyMGNvbmNlcnR8ZW58MHx8fHwxNzcxMDIxMjEzfDA&ixlib=rb-4.1.0&q=85",
-    alt: "Ambiente de concierto",
+    imagen: '/Images/IMG_3614.HEIC.jpeg',
+    alt: "Astrotrén en vivo en Gier",
   },
   {
     id: 9,
-    url: "https://images.unsplash.com/photo-1562362898-d1a9d124fd77?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxnb3RoaWN8ZW58MHx8fHwxNzcxMDIxMjMwfDA&ixlib=rb-4.1.0&q=85",
-    alt: "Arquitectura gótica",
+    imagen: '/Images/IMG_5122_edited.jpg',
+    alt: " ",
   },
 ];
 
