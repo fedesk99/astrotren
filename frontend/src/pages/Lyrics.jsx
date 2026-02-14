@@ -9,6 +9,20 @@ import {
 } from '../components/ui/accordion';
 
 const Lyrics = () => {
+    const [particles, setParticles] = useState([]);
+  
+    useEffect(() => {
+      // Generar partículas para efecto de estrellas
+      const newParticles = Array.from({ length: 50 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * 2 + 1,
+        duration: Math.random() * 3 + 2,
+      }));
+      setParticles(newParticles);
+    }, []);
+  
   return (
     <div className="min-h-screen bg-black text-white pt-24 pb-16">
       <div className="container mx-auto px-4">
