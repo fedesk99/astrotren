@@ -118,17 +118,17 @@ export const gallery = [
   },
   {
     id: 7,
-    imagen: '/Images/IMG_2767.HEIC.jpeg',
+    url: '/Images/IMG_2767.HEIC.jpeg',
     alt: " ",
   },
   {
     id: 8,
-    imagen: '/Images/IMG_3614.HEIC.jpeg',
+    url: '/Images/IMG_3614.HEIC.jpeg',
     alt: "Astrotrén en vivo en Gier",
   },
   {
     id: 9,
-    imagen: '/Images/IMG_5122_edited.jpg',
+    url: '/Images/IMG_5122_edited.jpg',
     alt: " ",
   },
 ];
