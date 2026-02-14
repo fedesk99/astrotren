@@ -100,14 +100,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Decoración de murciélagos */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none opacity-5">
-        <div className="container mx-auto px-4 flex justify-around py-4">
-          <span className="text-4xl">🦇</span>
-          <span className="text-4xl">🦇</span>
-          <span className="text-4xl">🦇</span>
-        </div>
-      </div>
     </footer>);
 
 };
