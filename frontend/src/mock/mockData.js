@@ -54,7 +54,7 @@ export const merchandise = [
     images: [
       "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/1nbgqx08_remera%20cl%C3%A1sica.png",
     ],
-    description: "Remera clásica con logo de Astrotrén",
+    description: "Remera clásica con logo",
   },
   {
     id: 2,
@@ -72,7 +72,7 @@ export const merchandise = [
     images: [
       "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/6ljiguoz_Gorra%201.png",
     ],
-    description: "Gorra negra con logo de Astrotrén",
+    description: "Gorra negra con imagotipo",
   },
   {
     id: 4,
@@ -81,7 +81,7 @@ export const merchandise = [
     images: [
       "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/wtrdjzjj_Gorra%202.png",
     ],
-    description: "Gorra negra con imagotipo de Astrotrén",
+    description: "Gorra negra con isologo e imagotipo",
   },
 ];
 
@@ -89,32 +89,32 @@ export const gallery = [
   {
     id: 1,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/15uyvgko_IMG_5370_edited.jpg",
-    alt: "Astrotrén en vivo",
+    alt: "En vivo",
   },
   {
     id: 2,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/os2yk54e_IMG_4898_edited.jpg",
-    alt: "Astrotrén - Cris",
+    alt: "Cris",
   },
   {
     id: 3,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/bxmh9gvp_IMG_4907_edited.jpg",
-    alt: "Astrotrén - Fede",
+    alt: "Fede",
   },
   {
     id: 4,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/o953pp5i_IMG_4922_edited.jpg",
-    alt: "Astrotrén - Luc",
+    alt: "Luc",
   },
   {
     id: 5,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/lsw0glyo_IMG_4939_edited.jpg",
-    alt: "Astrotrén - Canos Tento",
+    alt: "Canos Tento",
   },
   {
     id: 6,
     url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/o7c78o0o_IMG_5042_edited.jpg",
-    alt: "Astrotrén en vivo en Planta Alta",
+    alt: "En vivo en Planta Alta",
   },
   {
     id: 7,
@@ -124,7 +124,7 @@ export const gallery = [
   {
     id: 8,
     url: '/Images/IMG_3614.HEIC.jpeg',
-    alt: "Astrotrén en vivo en Gier",
+    alt: "En vivo en Gier",
   },
   {
     id: 9,
@@ -146,7 +146,7 @@ export const lyrics = [
   { id: 1, title: "AVE DE FUEGO", lyrics: `[Letra próximamente]` },
   { id: 2, title: "BRILLANDO EN LA OSCURIDAD", lyrics: `[Letra próximamente]` },
   { id: 3, title: "CAZARRECOMPENSAS", lyrics: `[Letra próximamente]` },
-  { id: 4, title: "COMO LLEGAR A VOS", lyrics: `[Letra próximamente]` },
+  { id: 4, title: "CÓMO LLEGAR A VOS", lyrics: `[Letra próximamente]` },
   { id: 5, title: "DAME UNA RAZÓN", lyrics: `[Letra próximamente]` },
   { id: 6, title: "DIOSES DEL OLIMPO", lyrics: `[Letra próximamente]` },
   { id: 7, title: "DISCRIMINACIÓN", lyrics: `[Letra próximamente]` },
