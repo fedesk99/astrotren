@@ -90,12 +90,6 @@ const Shows = () => {
           </div>
         </div>
 
-        {/* Decoración */}
-        <div className="mt-20 flex justify-center gap-8 text-4xl opacity-20">
-          <span className="animate-bounce">🦇</span>
-          <span className="animate-bounce" style={{ animationDelay: '0.2s' }}>🎤</span>
-          <span className="animate-bounce" style={{ animationDelay: '0.4s' }}>🦇</span>
-        </div>
       </div>
     </div>
   );
