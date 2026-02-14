@@ -3,20 +3,6 @@ import { playlists, logos } from '../mock/mockData';
 import { Play, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Music = () => {
-    const [particles, setParticles] = useState([]);
-  
-    useEffect(() => {
-      // Generar partículas para efecto de estrellas
-      const newParticles = Array.from({ length: 50 }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: Math.random() * 2 + 1,
-        duration: Math.random() * 3 + 2,
-      }));
-      setParticles(newParticles);
-    }, []);
-  
   const [expandedPlaylist, setExpandedPlaylist] = useState(null);
 
   return (

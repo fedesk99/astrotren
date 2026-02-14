@@ -3,20 +3,6 @@ import { gallery, logos } from '../mock/mockData';
 import { X } from 'lucide-react';
 
 const Gallery = () => {
-    const [particles, setParticles] = useState([]);
-  
-    useEffect(() => {
-      // Generar partículas para efecto de estrellas
-      const newParticles = Array.from({ length: 50 }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: Math.random() * 2 + 1,
-        duration: Math.random() * 3 + 2,
-      }));
-      setParticles(newParticles);
-    }, []);
-  
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
