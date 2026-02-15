@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section con partículas */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="min-h-[calc(100vh-80px)] mt-20 overflow-hidden">
         {/* Fondo degradado */}
         <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black"></div>
 

@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       <div className="App bg-black min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 pt-24">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
