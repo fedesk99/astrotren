@@ -19,7 +19,7 @@ const Background = () => {
     }, [location.pathname]);
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden">
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Fondo degradado */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black"></div>
 
