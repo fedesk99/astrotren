@@ -21,7 +21,7 @@ const Background = () => {
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       
       {/* Degradado base */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-950 via-black to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black"></div>
 
       {/* Estrellas */}
       <div className="absolute inset-0">
