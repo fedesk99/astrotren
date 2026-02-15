@@ -144,7 +144,7 @@ export const socialLinks = {
 
 export const lyrics = [
   { id: 1, title: "AVE DE FUEGO", lyrics: `[Letra próximamente]` },
-  { id: 2, title: "BRILLANDO EN LA OSCURIDAD", lyrics: "Buscando el santuario donde poder descansar"
+  { id: 2, title: "BRILLANDO EN LA OSCURIDAD", lyrics: "Buscando el santuario donde poder descansar
   Caminando a paso lento me alejé de la ciudad
   Muchas cruces puedo ver, frías tumbas que no brillan desde ayer
   Dime nena donde estás y con mi luz voy a encontrarte en la oscuridad
