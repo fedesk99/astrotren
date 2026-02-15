@@ -166,35 +166,36 @@ Son los cazarrecompensas buscando venganza en un pueblo sin luz\n\
 Django y Santana te condenan a dormir en un ataúd\n\
 Son los cazarrecompensas buscando venganza en un pueblo sin luz\n\n\
 Forajido descarriado, y un sombrero bien gastado\n\
-Su leyenda, hablaba por él...\n\
+Su leyenda, hablaba por él\n\
 Ambidiestro temerario, todos temen enfrentarlo\n\
-Su leyenda, hablaba por él...\n\
-Cazarrecompensa fuera de la ley.\n\
-Cazarrecompensas por siempre seré...\n\
-Cazarrecompensa fuera de la ley.\n\
-Cazarrecompensas por siempre seré...\n\n\
+Su leyenda, hablaba por él\n\
+Cazarrecompensa fuera de la ley\n\
+Cazarrecompensas por siempre seré\n\
+Cazarrecompensa fuera de la ley\n\
+Cazarrecompensas por siempre seré\n\n\
 Y cuando del bar se fue, la muerte partió también\n\
-Su leyenda hablaba por él" },
+Su leyenda hablaba por él\n\
+u leyenda, hablaba por él" },
   { id: 4, title: "CÓMO LLEGAR A VOS", lyrics: "Gritos desesperados de ultratumba,\n\
 guiados por ilusiones de hoy y también de ayer,\n\
 hacen que al avanzar entre las penumbras,\n\
-puedas ver lo que muchos no quieren ver\n\
-Quiero saber cómo hacer para llegar a vos,\n\
+puedas ver lo que muchos no quieren ver\n\n\
+Quiero saber cómo hacer para llegar a vos\n\
 y poder descubrir lo que es el amor\n\
 Lo que es el amor\n\n\
 Es complicado hacerle entender al desolado,\n\
 cuando está a punto de cruzar el umbral letal\n\
 Y más complicado es brindarle algunas razones,\n\
 cuando en el fondo vos también las buscas\n\n\
-Perdido estoy, en una ilusión.\n\
-Perdido estoy, y no sé cómo llegar a vos\n\
+Perdido estoy en una ilusión\n\
+Perdido estoy y no sé cómo llegar a vos\n\
 Cómo llegar a vos\n\n\
 No existe mejor poción de encantamiento,\n\
 que darle a tu existencia una simple razón\n\
 Aunque debas dejar de lado a la inocencia,\n\
 para encontrar respuestas en tu interior\n\n\
-Perdido estoy, en una ilusión.\n\
-Perdido estoy, y no sé cómo llegar a vos\n\n\
+Perdido estoy en una ilusión.\n\
+Perdido estoy y no sé cómo llegar a vos\n\n\
 Cómo llegar a vos Oh-oh-oh-oh\n\
 Cómo llegar a vos Oh-oh-oh-oh" },
   { id: 5, title: "DAME UNA RAZÓN", lyrics: `[Letra próximamente]` },
