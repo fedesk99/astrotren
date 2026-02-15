@@ -52,13 +52,25 @@ code {
 .page-title {
   font-family: 'IronHorse', serif;
   letter-spacing: 8px;
-  font-size: 10rem; /* más grande */
-
+  font-size: 3rem; /* móvil: pequeño */
 }
+
+@media (min-width: 640px) {
+  .page-title {
+    font-size: 4rem; /* tablet pequeño */
+  }
+}
+
 @media (min-width: 768px) {
-    .page-title {
-        font-size: 4rem;
-    }
+  .page-title {
+    font-size: 4rem; /* tablet/desktop mediano */
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-title {
+    font-size: 6rem; /* desktop grande */
+  }
 }
 
 @layer base {
