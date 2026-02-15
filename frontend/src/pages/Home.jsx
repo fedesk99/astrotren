@@ -21,9 +21,9 @@ const Home = () => {
   const nextShow = shows[0]?.dates[0];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white">
       {/* Hero Section con partículas */}
-      <section className="min-h-[calc(100vh-80px)] mt-20 overflow-hidden">
+      <section className="min-h-[calc(100vh-80px)] overflow-hidden">
         {/* Fondo degradado */}
         <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black"></div>
 
