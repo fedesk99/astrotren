@@ -15,7 +15,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App min-h-screen flex flex-col">
+      <div className="App relative z-10 min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
           <Routes>
