@@ -137,3 +137,12 @@ a:active {
     opacity: 0;
   }
 }
+
+/* Estilo títulos principales */
+.page-title {
+  text-shadow:
+    -1px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff;
+}
