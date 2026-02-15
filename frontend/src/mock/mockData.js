@@ -175,23 +175,23 @@ Brillando en la oscuridad"},
   { id: 3, title: "CAZARRECOMPENSAS", lyrics: "Un pistolero cabalgando en su corcel,\n\
 vino al pueblo, al atardecer\n\
 Y cuando en el bar entró, la muerte entró también\n\
-Su leyenda, hablaba por él\n\
-Su leyenda, hablaba por él\n\n\
+Su leyenda hablaba por él...\n\
+Su leyenda hablaba por él...\n\n\
 Truenan los tiros, ya se acercan, desde el norte hacia el sur\n\
 Son los cazarrecompensas buscando venganza en un pueblo sin luz\n\
 Django y Santana te condenan a dormir en un ataúd\n\
 Son los cazarrecompensas buscando venganza en un pueblo sin luz\n\n\
 Forajido descarriado, y un sombrero bien gastado\n\
-Su leyenda, hablaba por él\n\
+Su leyenda hablaba por él\n\
 Ambidiestro temerario, todos temen enfrentarlo\n\
-Su leyenda, hablaba por él\n\
-Cazarrecompensa fuera de la ley\n\
+Su leyenda hablaba por él\n\
+Cazarrecompensas fuera de la ley\n\
 Cazarrecompensas por siempre seré\n\
-Cazarrecompensa fuera de la ley\n\
+Cazarrecompensas fuera de la ley\n\
 Cazarrecompensas por siempre seré\n\n\
 Y cuando del bar se fue, la muerte partió también\n\
-Su leyenda hablaba por él\n\
-Su leyenda, hablaba por él"},
+Su leyenda hablaba por él...\n\
+Su leyenda hablaba por él..."},
   { id: 4, title: "CÓMO LLEGAR A VOS", lyrics: "Gritos desesperados de ultratumba,\n\
 guiados por ilusiones de hoy y también de ayer,\n\
 hacen que al avanzar entre las penumbras,\n\
