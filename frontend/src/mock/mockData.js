@@ -144,70 +144,59 @@ export const socialLinks = {
 
 export const lyrics = [
   { id: 1, title: "AVE DE FUEGO", lyrics: `[Letra próximamente]` },
-  { id: 2, title: "BRILLANDO EN LA OSCURIDAD", lyrics: "Buscando el santuario donde poder descansar
-  Caminando a paso lento me alejé de la ciudad
-  Muchas cruces puedo ver, frías tumbas que no brillan desde ayer
-  Dime nena donde estás y con mi luz voy a encontrarte en la oscuridad
-  
-  Brillando en la oscuridad, yo te voy a encontrar
-  Brillando en la oscuridad
-
-  Avanzando vino la parca, con el rostro sin expresión
-  y al señalar mi propia tumba desencadenó la reacción
-  La ciudad va quedando atrás y sus luces van dejando de brillar
-  Dime nena donde estás y con mi luz voy a encontrarte en la oscuridad
-  
-  Brillando en la oscuridad, yo te voy a encontrar.
-  Brillando en la oscuridad" },
-  { id: 3, title: "CAZARRECOMPENSAS", lyrics: "Un pistolero cabalgando en su corcel,
-  vino al pueblo, al atardecer
-  Y cuando en el bar entró, la muerte entró también
-  Su leyenda, hablaba por él
-  Su leyenda, hablaba por él
-
-  Truenan los tiros, ya se acercan, desde el norte hacia el sur
-  Son los cazarrecompensas buscando venganza en un pueblo sin luz
-  Django y Santana te condenan a dormir en un ataúd
-  Son los cazarrecompensas buscando venganza en un pueblo sin luz
-
-  Forajido descarriado, y un sombrero bien gastado
-  Su leyenda, hablaba por él...
-  Ambidiestro temerario, todos temen enfrentarlo
-  Su leyenda, hablaba por él...
-  Cazarrecompensa fuera de la ley.
-  Cazarrecompensas por siempre seré...
-  Cazarrecompensa fuera de la ley.
-  Cazarrecompensas por siempre seré...
-
-  Y cuando del bar se fue, la muerte partió también
-  Su leyenda hablaba por él" },
-  { id: 4, title: "CÓMO LLEGAR A VOS", lyrics: "Gritos desesperados de ultratumba,
-  guiados por ilusiones de hoy y también de ayer,
-  hacen que al avanzar entre las penumbras,
-  puedas ver lo que muchos no quieren ver
-  Quiero saber cómo hacer para llegar a vos,
-  y poder descubrir lo que es el amor
-  Lo que es el amor
-
-  Es complicado hacerle entender al desolado,
-  cuando está a punto de cruzar el umbral letal
-  Y más complicado es brindarle algunas razones,
-  cuando en el fondo vos también las buscas
-
-  Perdido estoy, en una ilusión.
-  Perdido estoy, y no sé cómo llegar a vos
-  Cómo llegar a vos
-
-  No existe mejor poción de encantamiento,
-  que darle a tu existencia una simple razón
-  Aunque debas dejar de lado a la inocencia,
-  para encontrar respuestas en tu interior
-  
-  Perdido estoy, en una ilusión.
-  Perdido estoy, y no sé cómo llegar a vos
-
-  Cómo llegar a vos Oh-oh-oh-oh
-  Cómo llegar a vos Oh-oh-oh-oh" },
+  { id: 2, title: "BRILLANDO EN LA OSCURIDAD", lyrics: "Buscando el santuario donde poder descansar\n\
+Caminando a paso lento me alejé de la ciudad\n\
+Muchas cruces puedo ver, frías tumbas que no brillan desde ayer\n\
+Dime nena donde estás y con mi luz voy a encontrarte en la oscuridad\n\n\
+Brillando en la oscuridad, yo te voy a encontrar\n\
+Brillando en la oscuridad\n\n\
+Avanzando vino la parca, con el rostro sin expresión\n\
+y al señalar mi propia tumba desencadenó la reacción\n\
+La ciudad va quedando atrás y sus luces van dejando de brillar\n\
+Dime nena donde estás y con mi luz voy a encontrarte en la oscuridad\n\n\
+Brillando en la oscuridad, yo te voy a encontrar\n\
+Brillando en la oscuridad" },
+  { id: 3, title: "CAZARRECOMPENSAS", lyrics: "Un pistolero cabalgando en su corcel,\n\
+vino al pueblo, al atardecer\n\
+Y cuando en el bar entró, la muerte entró también\n\
+Su leyenda, hablaba por él\n\
+Su leyenda, hablaba por él\n\n\
+Truenan los tiros, ya se acercan, desde el norte hacia el sur\n\
+Son los cazarrecompensas buscando venganza en un pueblo sin luz\n\
+Django y Santana te condenan a dormir en un ataúd\n\
+Son los cazarrecompensas buscando venganza en un pueblo sin luz\n\n\
+Forajido descarriado, y un sombrero bien gastado\n\
+Su leyenda, hablaba por él...\n\
+Ambidiestro temerario, todos temen enfrentarlo\n\
+Su leyenda, hablaba por él...\n\
+Cazarrecompensa fuera de la ley.\n\
+Cazarrecompensas por siempre seré...\n\
+Cazarrecompensa fuera de la ley.\n\
+Cazarrecompensas por siempre seré...\n\n\
+Y cuando del bar se fue, la muerte partió también\n\
+Su leyenda hablaba por él" },
+  { id: 4, title: "CÓMO LLEGAR A VOS", lyrics: "Gritos desesperados de ultratumba,\n\
+guiados por ilusiones de hoy y también de ayer,\n\
+hacen que al avanzar entre las penumbras,\n\
+puedas ver lo que muchos no quieren ver\n\
+Quiero saber cómo hacer para llegar a vos,\n\
+y poder descubrir lo que es el amor\n\
+Lo que es el amor\n\n\
+Es complicado hacerle entender al desolado,\n\
+cuando está a punto de cruzar el umbral letal\n\
+Y más complicado es brindarle algunas razones,\n\
+cuando en el fondo vos también las buscas\n\n\
+Perdido estoy, en una ilusión.\n\
+Perdido estoy, y no sé cómo llegar a vos\n\
+Cómo llegar a vos\n\n\
+No existe mejor poción de encantamiento,\n\
+que darle a tu existencia una simple razón\n\
+Aunque debas dejar de lado a la inocencia,\n\
+para encontrar respuestas en tu interior\n\n\
+Perdido estoy, en una ilusión.\n\
+Perdido estoy, y no sé cómo llegar a vos\n\n\
+Cómo llegar a vos Oh-oh-oh-oh\n\
+Cómo llegar a vos Oh-oh-oh-oh" },
   { id: 5, title: "DAME UNA RAZÓN", lyrics: `[Letra próximamente]` },
   { id: 6, title: "DIOSES DEL OLIMPO", lyrics: `[Letra próximamente]` },
   { id: 7, title: "DISCRIMINACIÓN", lyrics: `[Letra próximamente]` },
@@ -220,69 +209,57 @@ export const lyrics = [
   { id: 14, title: "GAVILÁN", lyrics: `[Letra próximamente]` },
   { id: 15, title: "GUARDIANES DE LA NIEBLA", lyrics: `[Letra próximamente]` },
   { id: 16, title: "HASTA EL FINAL", lyrics: `[Letra próximamente]` },
-  { id: 17, title: "HOY", lyrics: "En la niebla te iluminaste
-  ahuyentando a todos los cuervos.
-  Imposible será olvidarme, si (ya) soy parte de tus recuerdos
-
-  Todo puede ser, todo puede ser, todo puede suceder
-  Todo puede ser, todo puede ser, todo puede suceder
-  Hoy
-
-  Cuando la ciudad despierte, los fantasmas se desvanecerán
-  Por las almas de los que vencieron, defendiendo a su ideal
-  Todo los que nos pasó, se ha quedado en el ayer
-  Mírame a los ojos hoy, y empecemos otra vez
-   
-  Todo puede ser, todo puede ser, todo puede suceder
-  Todo puede ser, todo puede ser, todo puede suceder
-  Hoy"},
-  { id: 18, title: "LOBO SOLITARIO", lyrics: "Formas extrañas a tu alrededor
-  probaron sin suerte con su falso amor
-  Esperar de que sirve si te gusta buscar
-  y con tus botas puestas irás hasta el final...
-
-  Como un lobo solitario al que nadie pretende amar
-  te reflejaste en la luna aullando en tu soledad
-  Yo quiero que sepas que no eres irreal
-  y en este universo nos vamos a encontrar
-  Nos vamos a encontrar, nos vamos a encontrar
-  Nos vamos a encontrar, nos vamos a encontrar
-
-  Formas macabras se alejan de vos
-  huyen de tu mente ¡Algo las espantó!
-  Algo que hay en tu esencia, un magnetismo ideal
-  Sólo para elegidos que te comprenderán
-
-  Como un lobo solitario al que nadie pretende amar
-  te reflejaste en la luna aullando en tu soledad
-  Yo quiero que sepas que no eres irreal
-  y en este universo nos vamos a encontrar
-  Nos vamos a encontrar, nos vamos a encontrar
-  Nos vamos a encontrar, nos vamos a encontrar
-
-  Lobo solitario, lobo solitario
-  Lobo solitario, yo soy"},
-  { id: 19, title: "NO NOS VENCERÁN", lyrics: "Barreras invencibles intentarán detenernos
-  También minarán los campos con odio incipiente
-  Nos atacarán las gárgolas con toda su furia
-  reflejando sus figuras en la legendaria luna
-
-  Y si al final te quedaste en el juego
-  tu espada y escudo aprenderás a usar
-  Nunca estuvo en tus reglas perder
-  y es por eso que tenemos que ganar
-
-  Y no nos vencerán, no nos vencerán
-  No nos vencerán, no nos vencerán
-    
-  Cuantos se fueron quedando a lo largo del camino
-  y cuantos han abandonado desde la partida
-
-  Yo se que es un juego difícil que algunos pensarán abandonar
-  Pero a pesar de todo no te rendirás
-
-  Y no nos vencerán, no nos vencerán
-  No nos vencerán, no nos vencerán" },
+  { id: 17, title: "HOY", lyrics: "En la niebla te iluminaste\n\
+ahuyentando a todos los cuervos.\n\
+Imposible será olvidarme, si (ya) soy parte de tus recuerdos\n\n\
+Todo puede ser, todo puede ser, todo puede suceder\n\
+Todo puede ser, todo puede ser, todo puede suceder\n\
+Hoy\n\n\
+Cuando la ciudad despierte, los fantasmas se desvanecerán\n\
+Por las almas de los que vencieron, defendiendo a su ideal\n\
+Todo los que nos pasó, se ha quedado en el ayer\n\
+Mírame a los ojos hoy, y empecemos otra vez\n\n\
+Todo puede ser, todo puede ser, todo puede suceder\n\
+Todo puede ser, todo puede ser, todo puede suceder\n\
+Hoy"},
+  { id: 18, title: "LOBO SOLITARIO", lyrics: "Formas extrañas a tu alrededor\n\
+probaron sin suerte con su falso amor\n\
+Esperar de que sirve si te gusta buscar\n\
+y con tus botas puestas irás hasta el final...\n\n\
+Como un lobo solitario al que nadie pretende amar\n\
+te reflejaste en la luna aullando en tu soledad\n\
+Yo quiero que sepas que no eres irreal\n\
+y en este universo nos vamos a encontrar\n\
+Nos vamos a encontrar, nos vamos a encontrar\n\
+Nos vamos a encontrar, nos vamos a encontrar\n\n\
+Formas macabras se alejan de vos\n\
+huyen de tu mente ¡Algo las espantó!\n\
+Algo que hay en tu esencia, un magnetismo ideal\n\
+Sólo para elegidos que te comprenderán\n\n\
+Como un lobo solitario al que nadie pretende amar\n\
+te reflejaste en la luna aullando en tu soledad\n\
+Yo quiero que sepas que no eres irreal\n\
+y en este universo nos vamos a encontrar\n\
+Nos vamos a encontrar, nos vamos a encontrar\n\
+Nos vamos a encontrar, nos vamos a encontrar\n\n\
+Lobo solitario, lobo solitario\n\
+Lobo solitario, yo soy"},
+  { id: 19, title: "NO NOS VENCERÁN", lyrics: "Barreras invencibles intentarán detenernos\n\
+También minarán los campos con odio incipiente\n\
+Nos atacarán las gárgolas con toda su furia\n\
+reflejando sus figuras en la legendaria luna\n\n\
+Y si al final te quedaste en el juego\n\
+tu espada y escudo aprenderás a usar\n\
+Nunca estuvo en tus reglas perder\n\
+y es por eso que tenemos que ganar\n\n\
+Y no nos vencerán, no nos vencerán\n\
+No nos vencerán, no nos vencerán\n\n\
+Cuantos se fueron quedando a lo largo del camino\n\
+y cuantos han abandonado desde la partida\n\n\
+Yo se que es un juego difícil que algunos pensarán abandonar\n\
+Pero a pesar de todo no te rendirás\n\n\
+Y no nos vencerán, no nos vencerán\n\
+No nos vencerán, no nos vencerán" },
   { id: 20, title: "RENEGADO", lyrics: `[Letra próximamente]` },
   { id: 21, title: "SALVAJE CORCEL", lyrics: `[Letra próximamente]` },
   { id: 22, title: "SOS COMO SOS", lyrics: `[Letra próximamente]` },
