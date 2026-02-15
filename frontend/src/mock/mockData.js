@@ -175,7 +175,7 @@ Cazarrecompensa fuera de la ley\n\
 Cazarrecompensas por siempre seré\n\n\
 Y cuando del bar se fue, la muerte partió también\n\
 Su leyenda hablaba por él\n\
-u leyenda, hablaba por él" },
+Su leyenda, hablaba por él" },
   { id: 4, title: "CÓMO LLEGAR A VOS", lyrics: "Gritos desesperados de ultratumba,\n\
 guiados por ilusiones de hoy y también de ayer,\n\
 hacen que al avanzar entre las penumbras,\n\
