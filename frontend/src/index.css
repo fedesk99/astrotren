@@ -5,21 +5,21 @@
 
 @font-face {
   font-family: 'IronHorse';
-  src: url('/fonts/IronHorse.ttf') format('truetype');
+  src: url('./assets/fonts/IronHorse.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Mirage';
-  src: url('/fonts/Mirage.ttf') format('truetype');
+  src: url('./assets/fonts/Mirage.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ThunderInferno';
-  src: url('/fonts/ThunderInferno.otf') format('truetype');
+  src: url('./assets/fonts/ThunderInferno.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,13 +39,26 @@ body {
     color: #ffffff;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Serif', serif;
+}
+
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'IronHorse', serif;
+.page-title {
+  font-family: 'IronHorse', serif;
+  letter-spacing: 8px;
+  font-size: 10rem; /* más grande */
+
+}
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 4rem;
+    }
 }
 
 @layer base {

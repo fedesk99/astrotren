@@ -14,11 +14,11 @@ const Lyrics = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-black tracking-wider text-[#3b1d5c] page-title">
+          <h1 className="text-5xl md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
             Letras
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-600 mx-auto mb-6"></div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-8">
             Explorá las letras de nuestras canciones y adentrarte en el universo lírico de Astrotrén.
           </p>
         </div>
