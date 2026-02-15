@@ -4,7 +4,7 @@ import { Instagram, Facebook, Music2, Mail, Phone, ExternalLink } from 'lucide-r
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-16">
+    <div className="min-h-screen text-white pt-24 pb-16">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
