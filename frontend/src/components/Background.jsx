@@ -19,9 +19,9 @@ const Background = () => {
     }, [location.pathname]);
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Fondo degradado */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black"></div>
+      <div className="absolute inset-0 bg-red-500"></div>
 
       {/* Partículas */}
       <div className="absolute inset-0">

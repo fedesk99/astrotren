@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Background from './components/Background';
 import Home from './pages/Home';
 import About from './pages/About';
 import Music from './pages/Music';
@@ -15,7 +16,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App min-h-screen flex flex-col">
+      <div className="App relative z-10 min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
           <Routes>
