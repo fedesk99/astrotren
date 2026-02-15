@@ -16,6 +16,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
+      <Background />
       <div className="App relative z-10 min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">

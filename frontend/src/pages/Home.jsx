@@ -4,19 +4,6 @@ import { ArrowRight, Music, Calendar, ShoppingBag } from 'lucide-react';
 import { bandInfo, logos, shows } from '../mock/mockData';
 
 const Home = () => {
-  const [particles, setParticles] = useState([]);
-
-  useEffect(() => {
-    // Generar partículas para efecto de estrellas
-    const newParticles = Array.from({ length: 50 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 2 + 1,
-      duration: Math.random() * 3 + 2,
-    }));
-    setParticles(newParticles);
-  }, []);
 
   const nextShow = shows[0]?.dates[0];
 
@@ -24,26 +11,6 @@ const Home = () => {
     <div className="min-h-screen text-white">
       {/* Hero Section con partículas */}
       <section className="min-h-[calc(100vh-80px)] mt-20 overflow-hidden">
-        {/* Fondo degradado */}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black"></div>
-
-        {/* Partículas de estrellas */}
-        <div className="absolute inset-0">
-          {particles.map((particle) => (
-            <div
-              key={particle.id}
-              className="absolute rounded-full bg-white animate-pulse"
-              style={{
-                left: `${particle.x}%`,
-                top: `${particle.y}%`,
-                width: `${particle.size}px`,
-                height: `${particle.size}px`,
-                animationDuration: `${particle.duration}s`,
-              }}
-            ></div>
-          ))}
-        </div>
-
         {/* Contenido principal */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           {/* Logo principal */}

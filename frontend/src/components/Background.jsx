@@ -21,24 +21,6 @@ const Background = () => {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Fondo degradado */}
-      <div className="absolute inset-0 bg-red-500"></div>
-
-      {/* Partículas */}
-      <div className="absolute inset-0">
-        {particles.map((particle) => (
-          <div
-            key={particle.id}
-            className="absolute rounded-full bg-white animate-pulse"
-            style={{
-              left: `${particle.x}%`,
-              top: `${particle.y}%`,
-              width: `${particle.size}px`,
-              height: `${particle.size}px`,
-              animationDuration: `${particle.duration}s`,
-            }}
-          />
-        ))}
-      </div>
     </div>
   );
 };
