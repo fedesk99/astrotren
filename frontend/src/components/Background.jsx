@@ -30,7 +30,7 @@ const Background = () => {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Degradado base */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a0022] via-[#080010] to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a0022] via-[#020005] to-black"></div>
 
       {/* Estrellas */}
       {particles.map((p) => (

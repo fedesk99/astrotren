@@ -19,7 +19,7 @@ const About = () => {
           <div className="border border-gray-800 rounded-lg p-8 md:p-12 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
             {/* Marco gótico decorativo */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-            <div className="absolute bottom-[-24px] left-0 w-full h-2 bg-gradient-to-r from-transparent via-purple-500 to-transparent rounded-full"></div>
+            <div className="absolute bottom-[-18px] left-0 w-full h-2 bg-gradient-to-r from-transparent via-purple-500 to-transparent rounded-full"></div>
             
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
