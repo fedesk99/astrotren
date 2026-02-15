@@ -8,7 +8,7 @@ const Shows = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
+          <h1 className="text-4xl md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
             Shows
           </h1>
           <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
