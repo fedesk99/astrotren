@@ -263,22 +263,26 @@ export const lyrics = [
   Lobo solitario, lobo solitario
   Lobo solitario, yo soy"},
   { id: 19, title: "NO NOS VENCERÁN", lyrics: "Barreras invencibles intentarán detenernos
-  También minarán los campos con odio incipiente
-  Nos atacarán las gárgolas con toda su furia
-  reflejando sus figuras en la legendaria luna
-  Y si al final te quedaste en el juego
-  tu espada y escudo aprenderás a usar
-  Nunca estuvo en tus reglas perder
-  y es por eso que tenemos que ganar
-  Y no nos vencerán, no nos vencerán
-  No nos vencerán, no nos vencerán
+También minarán los campos con odio incipiente
+Nos atacarán las gárgolas con toda su furia
+reflejando sus figuras en la legendaria luna
+
+Y si al final te quedaste en el juego
+tu espada y escudo aprenderás a usar
+Nunca estuvo en tus reglas perder
+y es por eso que tenemos que ganar
+
+Y no nos vencerán, no nos vencerán
+No nos vencerán, no nos vencerán
     
-  Cuantos se fueron quedando a lo largo del camino
-  y cuantos han abandonado desde la partida
-  Yo se que es un juego difícil que algunos pensarán abandonar
-  Pero a pesar de todo no te rendirás
-  Y no nos vencerán, no nos vencerán
-  No nos vencerán, no nos vencerán" },
+Cuantos se fueron quedando a lo largo del camino
+y cuantos han abandonado desde la partida
+
+Yo se que es un juego difícil que algunos pensarán abandonar
+Pero a pesar de todo no te rendirás
+
+Y no nos vencerán, no nos vencerán
+No nos vencerán, no nos vencerán" },
   { id: 20, title: "RENEGADO", lyrics: `[Letra próximamente]` },
   { id: 21, title: "SALVAJE CORCEL", lyrics: `[Letra próximamente]` },
   { id: 22, title: "SOS COMO SOS", lyrics: `[Letra próximamente]` },
