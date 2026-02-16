@@ -16,6 +16,7 @@ const Background = () => {
       // Rango de velocidad más amplio
       speed: Math.random() * 0.1 + 0.005, // 0.005 a 0.105
       float: Math.random() * 20 - 10, // movimiento vertical leve
+
     }));
     setParticles(newParticles);
   }, [location.pathname]);

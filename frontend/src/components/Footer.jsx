@@ -95,7 +95,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-900 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Astrotrén. Todos los derechos reservados.
+            © {new Date().getFullYear()} Astrotrén. Todos los derechos registrados.
           </p>
         </div>
       </div>

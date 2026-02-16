@@ -58,13 +58,6 @@ const Lyrics = () => {
             ))}
           </Accordion>
         </div>
-
-        {/* Nota */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-500 text-sm">
-            Las letras se irán agregando próximamente. Seguinos en nuestras redes para estar al tanto.
-          </p>
-        </div>
       </div>
     </div>
   );
