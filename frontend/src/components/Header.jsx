@@ -8,6 +8,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Blur al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -15,6 +16,15 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // 🔒 Bloquear scroll cuando el menú está abierto
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [isMobileMenuOpen]);
 
   const navLinks = [
     { name: 'Inicio', path: '/' },
@@ -29,41 +39,45 @@ const Header = () => {
 
   return (
     <>
-      {/* OVERLAY */}
+      {/* 🌌 OVERLAY */}
       <div
         onClick={() => setIsMobileMenuOpen(false)}
-        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
+        className={`fixed inset-0 bg-black/80 backdrop-blur-md z-40 lg:hidden 
+        transition-opacity duration-250 ease-out
+        ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
       />
 
-      {/* DRAWER */}
+      {/* 🚀 DRAWER */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-md z-50 
-        transform transition-transform duration-300 ease-in-out lg:hidden
-        ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl 
+        z-50 transform transition-all duration-300 ease-out lg:hidden
+        ${isMobileMenuOpen ? 
+          'translate-x-0 shadow-[-10px_0_40px_rgba(168,85,247,0.35)]' 
+          : 
+          'translate-x-full shadow-none'
+        }`}
       >
-        {/* Header del drawer */}
+        {/* Header del Drawer */}
         <div className="flex justify-between items-center p-6 border-b border-gray-800">
-          <span className="text-purple-400 font-bold tracking-wider">
+          <span className="text-purple-400 font-bold tracking-wider uppercase">
             Astrotrén
           </span>
           <button onClick={() => setIsMobileMenuOpen(false)}>
-            <X size={24} className="text-white hover:text-purple-400" />
+            <X size={26} className="text-white hover:text-purple-400 transition-colors" />
           </button>
         </div>
 
         {/* Links */}
-        <div className="flex flex-col gap-6 p-6">
+        <div className="flex flex-col gap-8 p-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-lg uppercase tracking-wider transition-colors ${
+              className={`text-lg uppercase tracking-wider transition-all duration-300 ${
                 location.pathname === link.path
                   ? 'text-purple-400'
-                  : 'text-gray-300 hover:text-white'
+                  : 'text-gray-300 hover:text-white hover:translate-x-2'
               }`}
             >
               {link.name}
@@ -72,7 +86,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* HEADER NORMAL */}
+      {/* 🌟 HEADER NORMAL */}
       <header
         className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
           isScrolled
@@ -90,7 +104,7 @@ const Header = () => {
               />
             </Link>
 
-            {/* Desktop nav */}
+            {/* Desktop */}
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
@@ -107,12 +121,12 @@ const Header = () => {
               ))}
             </div>
 
-            {/* Mobile button */}
+            {/* Botón mobile */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden text-white p-2 hover:text-purple-400 transition-colors"
             >
-              <Menu size={24} />
+              <Menu size={26} />
             </button>
           </div>
         </nav>
