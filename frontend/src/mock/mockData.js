@@ -42,7 +42,9 @@ export const shows = [
   },
   {
     year: "2026",
-    dates: [],
+    dates: [
+      { date: "15 Mayo 2026", venue: "Gier Music Club" }
+    ],
   },
 ];
 
@@ -68,7 +70,7 @@ export const merchandise = [
   {
     id: 3,
     name: "Gorra 1",
-    price: "$6500",
+    price: "$7000",
     images: [
       "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/6ljiguoz_Gorra%201.png",
     ],
@@ -77,7 +79,7 @@ export const merchandise = [
   {
     id: 4,
     name: "Gorra 2",
-    price: "$7500",
+    price: "$8000",
     images: [
       "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/wtrdjzjj_Gorra%202.png",
     ],
