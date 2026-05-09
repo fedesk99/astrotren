@@ -57,9 +57,7 @@ const Home = () => {
           {nextShow && (
             <div className="mt-16 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
               <p className="text-sm uppercase tracking-widest text-purple-400 mb-2">Próximo Show</p>
-              <p className="text-2xl font-bold text-white mb-1">{"15 de Mayo en Gier Music Club\n\n\
-              21 hs\n\n\
-              Entradas a $9000 por transferencia (alias: astrotren)"}</p>
+              <p className="text-2xl font-bold text-white mb-1 whitespace-pre-line">{"15 de Mayo en Gier Music Club\n\n21 hs\n\nEntradas a $9000 por transferencia (alias: astrotren)"}</p>
               <p className="text-lg text-gray-400">{" "}</p>
             </div>
           )}
