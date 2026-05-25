@@ -53,36 +53,28 @@ export const merchandise = [
     id: 1,
     name: "Remera Clásica",
     price: "$15000",
-    images: [
-      "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/1nbgqx08_remera%20cl%C3%A1sica.png",
-    ],
+    images: ['/Images/remera clásica.png'],
     description: "Remera clásica con logo",
   },
   {
     id: 2,
     name: "Remera fecha Gier",
     price: "$20000",
-    images: [
-      "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/j8tjh1un_remera%20fecha%20gier.png",
-    ],
+    images: ['/Images/remera fecha gier.png'],
     description: "Remera edición especial fecha Gier Music Club",
   },
   {
     id: 3,
     name: "Gorra 1",
     price: "$7000",
-    images: [
-      "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/6ljiguoz_Gorra%201.png",
-    ],
+    images: ['/Images/Gorra 1.png'],
     description: "Gorra negra con imagotipo",
   },
   {
     id: 4,
     name: "Gorra 2",
     price: "$8000",
-    images: [
-      "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/wtrdjzjj_Gorra%202.png",
-    ],
+    images: ['/Images/Gorra 2.png'],
     description: "Gorra negra con isologo e imagotipo",
   },
 ];
@@ -90,32 +82,32 @@ export const merchandise = [
 export const gallery = [
   {
     id: 1,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/15uyvgko_IMG_5370_edited.jpg",
+    url: '/Images/IMG_5370_edited.jpg',
     alt: "En vivo",
   },
   {
     id: 2,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/os2yk54e_IMG_4898_edited.jpg",
+    url: '/Images/IMG_4898_edited.jpg',
     alt: "Cris",
   },
   {
     id: 3,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/bxmh9gvp_IMG_4907_edited.jpg",
+    url: '/Images/IMG_4907_edited.jpg',
     alt: "Fede",
   },
   {
     id: 4,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/o953pp5i_IMG_4922_edited.jpg",
+    url: '/Images/IMG_4922_edited.jpg',
     alt: "Luc",
   },
   {
     id: 5,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/lsw0glyo_IMG_4939_edited.jpg",
+    url: '/Images/IMG_4939_edited.jpg',
     alt: "Canos Tento",
   },
   {
     id: 6,
-    url: "https://customer-assets.emergentagent.com/job_gothic-astrotren/artifacts/o7c78o0o_IMG_5042_edited.jpg",
+    url: '/Images/IMG_5042_edited.jpg',
     alt: "En vivo en Planta Alta",
   },
   {
