@@ -133,6 +133,16 @@ export const gallery = [
     url: '/Images/IMG_5122_edited.jpg',
     alt: " ",
   },
+  {
+    id: 10,
+    url: '/Images/IMG_7242.jpg',
+    alt: " ",
+  },
+  {
+    id: 11,
+    url: '/Images/IMG-20251201-WA0097.jpg',
+    alt: " ",
+  },
 ];
 
 export const socialLinks = {
