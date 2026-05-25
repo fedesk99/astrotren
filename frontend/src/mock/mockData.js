@@ -558,8 +558,8 @@ al menos lo intentarás"},
 ];
 
 export const logos = {
-  isologo: "https://customer-assets.emergentagent.com/job_3a5f8fd8-af20-469f-9eb7-04e8645767cf/artifacts/22k4afvt_ISOLOGO%20%20%283%29.png",
-  isologo2: "https://customer-assets.emergentagent.com/job_3a5f8fd8-af20-469f-9eb7-04e8645767cf/artifacts/azyc9e7k_ISOLOGO%20%20%285%29.png",
-  blanco: "https://customer-assets.emergentagent.com/job_3a5f8fd8-af20-469f-9eb7-04e8645767cf/artifacts/zjxq2eqd_BLANCO.png",
-  negro: "https://customer-assets.emergentagent.com/job_3a5f8fd8-af20-469f-9eb7-04e8645767cf/artifacts/z5u6zt0g_NEGRO.png",
+  isologo: '/Images/ISOLOGO  (3).png',
+  isologo2: '/Images/ISOLOGO  (5).png',
+  blanco: '/Images/BLANCO.png',
+  negro: '/Images/NEGRO.png',
 };
