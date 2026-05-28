@@ -53,14 +53,16 @@ export const merchandise = [
     id: 1,
     name: "Remera Clásica",
     price: "$15000",
-    images: ['/Images/remera clásica.png'],
+    images: ['/Images/remera clasica frente.png', '/Images/remera clasica dorso.png'],
+    imageLabels: ['Frente', 'Dorso'],
     description: "Remera clásica con logo",
   },
   {
     id: 2,
     name: "Remera fecha Gier",
     price: "$20000",
-    images: ['/Images/remera fecha gier.png'],
+    images: ['/Images/remera fecha gier frente.png', '/Images/remera fecha gier dorso.png'],
+    imageLabels: ['Frente', 'Dorso'],
     description: "Remera edición especial fecha Gier Music Club",
   },
   {
