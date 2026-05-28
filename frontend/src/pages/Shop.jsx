@@ -208,9 +208,6 @@ const Shop = () => {
                   <h2 id="product-modal-title" className="text-2xl md:text-3xl font-bold text-white">
                     {selectedProduct.name}
                   </h2>
-                  <p className="text-sm text-gray-400">
-                    {selectedProduct.imageLabels?.[selectedImageIndex] || `Foto ${selectedImageIndex + 1}`} de {selectedProduct.images.length}
-                  </p>
                 </div>
                 <button
                   type="button"
