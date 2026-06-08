@@ -5,7 +5,33 @@ import { bandInfo, logos, shows } from '../mock/mockData';
 
 const Home = () => {
 
-  const nextShow = shows[0]?.dates[0];
+  const monthIndex = {
+    Enero: 0,
+    Febrero: 1,
+    Marzo: 2,
+    Abril: 3,
+    Mayo: 4,
+    Junio: 5,
+    Julio: 6,
+    Agosto: 7,
+    Septiembre: 8,
+    Octubre: 9,
+    Noviembre: 10,
+    Diciembre: 11,
+  };
+
+  const getShowDate = (show) => {
+    const [day, month, year] = show.date.split(' ');
+    return new Date(Number(year), monthIndex[month], Number(day));
+  };
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const nextShow = shows
+    .flatMap((yearData) => yearData.dates)
+    .sort((a, b) => getShowDate(a) - getShowDate(b))
+    .find((show) => getShowDate(show) >= today);
 
   return (
     <div className="min-h-screen text-white">
@@ -57,8 +83,12 @@ const Home = () => {
           {nextShow && (
             <div className="mt-16 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
               <p className="text-sm uppercase tracking-widest text-purple-400 mb-2">Próximo Show</p>
-              <p className="text-2xl font-bold text-white mb-1 whitespace-pre-line">{"A anunciar"}</p>
-              <p className="text-lg text-gray-400">{" "}</p>
+              <p className="text-2xl font-bold text-white mb-1 whitespace-pre-line">
+                Viernes 26 de junio - {nextShow.time}
+              </p>
+              <p className="text-lg text-gray-400">
+                {nextShow.venue} ({nextShow.address})
+              </p>
             </div>
           )}
         </div>

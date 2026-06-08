@@ -3,6 +3,26 @@ import { shows, logos } from '../mock/mockData';
 import { Calendar, MapPin } from 'lucide-react';
 
 const Shows = () => {
+  const monthIndex = {
+    Enero: 0,
+    Febrero: 1,
+    Marzo: 2,
+    Abril: 3,
+    Mayo: 4,
+    Junio: 5,
+    Julio: 6,
+    Agosto: 7,
+    Septiembre: 8,
+    Octubre: 9,
+    Noviembre: 10,
+    Diciembre: 11,
+  };
+
+  const getWeekday = (date) => {
+    const [day, month, year] = date.split(' ');
+    return new Date(Number(year), monthIndex[month], Number(day)).toLocaleDateString('es-AR', { weekday: 'long' });
+  };
+
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
       <div className="container mx-auto px-4">
@@ -48,9 +68,8 @@ const Shows = () => {
                           <div>
                             <p className="text-2xl font-bold text-white">{show.date}</p>
                             <p className="text-sm text-gray-400 uppercase tracking-wider">
-                              {new Date(show.date.split(' ')[2], 
-                                new Date(show.date.split(' ')[1] + ' 1, 2000').getMonth(), 
-                                show.date.split(' ')[0]).toLocaleDateString('es-AR', { weekday: 'long' })}
+                              {getWeekday(show.date)}
+                              {show.time && ` - ${show.time}`}
                             </p>
                           </div>
                         </div>
@@ -58,7 +77,10 @@ const Shows = () => {
                         {/* Venue */}
                         <div className="flex items-center gap-3 text-gray-300">
                           <MapPin className="text-purple-400" size={24} />
-                          <p className="text-xl font-semibold">{show.venue}</p>
+                          <p className="text-xl font-semibold">
+                            {show.venue}
+                            {show.address && ` (${show.address})`}
+                          </p>
                         </div>
                       </div>
                     </div>
