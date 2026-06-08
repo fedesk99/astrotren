@@ -43,6 +43,7 @@ export const shows = [
   {
     year: "2026",
     dates: [
+      { date: "15 Mayo 2026", venue: "Gier Music Club" },
       {
         date: "26 Junio 2026",
         time: "23 hs",
