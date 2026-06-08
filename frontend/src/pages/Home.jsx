@@ -84,10 +84,10 @@ const Home = () => {
             <div className="mt-16 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
               <p className="text-sm uppercase tracking-widest text-purple-400 mb-2">Próximo Show</p>
               <p className="text-2xl font-bold text-white mb-1 whitespace-pre-line">
-                Viernes 26 de junio - {nextShow.time}
+                Viernes 26 de Junio - 23 hs
               </p>
               <p className="text-lg text-gray-400">
-                {nextShow.venue} ({nextShow.address})
+                Gier Music Club (Av. Álvarez Thomas 1078)
               </p>
             </div>
           )}

@@ -46,9 +46,7 @@ export const shows = [
       { date: "15 Mayo 2026", venue: "Gier Music Club" },
       {
         date: "26 Junio 2026",
-        time: "23 hs",
         venue: "Gier Music Club",
-        address: "Av. Álvarez Thomas 1078",
       },
     ],
   },
