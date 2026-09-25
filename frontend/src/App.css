@@ -146,3 +146,8 @@ a:active {
     -1px  1px 0 #ffffff,
      1px  1px 0 #ffffff;
 }
+
+.admin-btn { display:inline-flex; align-items:center; gap:.45rem; border:1px solid #374151; border-radius:.5rem; background:#111827; color:#d1d5db; padding:.5rem .75rem; font-size:.875rem; }
+.admin-btn:hover { border-color:#9333ea; color:#fff; background:#1f1630; }
+.admin-btn.danger { color:#fca5a5; }
+.admin-btn.danger:hover { border-color:#ef4444; background:#2a1111; }

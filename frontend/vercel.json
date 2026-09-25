@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/admin/(.*)", "destination": "/index.html" },
+
+    {
+      "source": "/media/gallery/:path*",
+      "destination": "https://irltyewwdqdrpxigukle.supabase.co/storage/v1/object/public/media/gallery/:path*"
+    },
+    {
+      "source": "/media/products/:path*",
+      "destination": "https://irltyewwdqdrpxigukle.supabase.co/storage/v1/object/public/media/products/:path*"
+    },
+
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

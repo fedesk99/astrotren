@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { gallery, logos } from '../mock/mockData';
+import { useSupabaseContent } from '../hooks/useSupabaseContent';
 import { X } from 'lucide-react';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const { items: gallery, loading, error } = useSupabaseContent('gallery');
 
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
@@ -13,11 +14,25 @@ const Gallery = () => {
           <h1 className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
             Galería
           </h1>
+
           <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
+
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-8">
             Momentos capturados en el escenario y detrás de él. La esencia visual de Astrotrén.
           </p>
         </div>
+
+        {loading && (
+          <p className="mb-6 text-center text-sm text-gray-500">
+            Cargando galería…
+          </p>
+        )}
+
+        {error && (
+          <p className="mb-6 text-center text-sm text-red-400">
+            No se pudo cargar la galería.
+          </p>
+        )}
 
         {/* Grid de imágenes */}
         <div className="max-w-7xl mx-auto">
@@ -30,19 +45,22 @@ const Gallery = () => {
               >
                 {/* Marco gótico decorativo */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
 
                 {/* Imagen */}
                 <img
-                  src={image.url}
-                  alt={image.alt}
+                  src={image.image_url}
+                  alt={image.caption || ''}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-white font-semibold">{image.alt}</p>
+                    <p className="text-white font-semibold">
+                      {image.caption || ''}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -63,9 +81,10 @@ const Gallery = () => {
             >
               <X size={32} />
             </button>
+
             <img
-              src={selectedImage.url}
-              alt={selectedImage.alt}
+              src={selectedImage.image_url}
+              alt={selectedImage.caption || ''}
               className="max-w-full max-h-full object-contain rounded-lg border-2 border-purple-500"
             />
           </div>

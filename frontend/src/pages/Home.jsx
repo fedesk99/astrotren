@@ -1,37 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Music, Calendar, ShoppingBag } from 'lucide-react';
-import { bandInfo, logos, shows } from '../mock/mockData';
+import { bandInfo, logos, shows as fallbackShows } from '../mock/mockData';
+import { useSupabaseContent } from '../hooks/useSupabaseContent';
 
 const Home = () => {
 
-  const monthIndex = {
-    Enero: 0,
-    Febrero: 1,
-    Marzo: 2,
-    Abril: 3,
-    Mayo: 4,
-    Junio: 5,
-    Julio: 6,
-    Agosto: 7,
-    Septiembre: 8,
-    Octubre: 9,
-    Noviembre: 10,
-    Diciembre: 11,
-  };
-
-  const getShowDate = (show) => {
-    const [day, month, year] = show.date.split(' ');
-    return new Date(Number(year), monthIndex[month], Number(day));
-  };
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  const nextShow = shows
-    .flatMap((yearData) => yearData.dates)
-    .sort((a, b) => getShowDate(a) - getShowDate(b))
-    .find((show) => getShowDate(show) >= today);
+  const { items: showItems } = useSupabaseContent('shows', fallbackShows.flatMap((year) => year.dates).map((item, index) => {
+    const [day, monthName, year] = item.date.split(' ');
+    const months = { Enero:'01', Febrero:'02', Marzo:'03', Abril:'04', Mayo:'05', Junio:'06', Julio:'07', Agosto:'08', Septiembre:'09', Octubre:'10', Noviembre:'11', Diciembre:'12' };
+    return { id:index+1, date:`${year}-${months[monthName]}-${day.padStart(2,'0')}`, time:'', venue:item.venue, address:item.address || '', position:index };
+  }));
+  const today = new Date(); today.setHours(0,0,0,0);
+  const nextShow = showItems.map(show => ({...show, parsedDate:new Date(`${show.date}T00:00:00`)})).sort((a,b)=>a.parsedDate-b.parsedDate).find(show=>show.parsedDate>=today);
 
   return (
     <div className="min-h-screen text-white">
@@ -84,10 +65,10 @@ const Home = () => {
             <div className="mt-16 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
               <p className="text-sm uppercase tracking-widest text-purple-400 mb-2">Próximo Show</p>
               <p className="text-2xl font-bold text-white mb-1 whitespace-pre-line">
-                Viernes 26 de Junio - 23 hs
+                {nextShow.parsedDate.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' })}{nextShow.time ? ` - ${nextShow.time}` : ''}
               </p>
               <p className="text-lg text-gray-400">
-                Gier Music Club (Av. Álvarez Thomas 1078)
+                {nextShow.venue}{nextShow.address ? ` (${nextShow.address})` : ''}
               </p>
             </div>
           )}
