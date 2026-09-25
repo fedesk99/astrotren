@@ -1,4 +1,3 @@
-jsx
 import React, { useState } from 'react';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
 import { X } from 'lucide-react';
@@ -98,3 +97,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

@@ -1,4 +1,3 @@
-jsx
 import React from 'react';
 import { logos } from '../mock/mockData';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
@@ -193,3 +192,4 @@ Object.values(groupedShows).forEach((shows) => {
 };
 
 export default Shows;
+

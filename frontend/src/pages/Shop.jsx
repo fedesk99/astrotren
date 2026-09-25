@@ -1,4 +1,3 @@
-jsx
 import React, { useCallback, useEffect, useState } from 'react';
 import { logos } from '../mock/mockData';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
@@ -419,3 +418,4 @@ const Shop = () => {
 };
 
 export default Shop;
+

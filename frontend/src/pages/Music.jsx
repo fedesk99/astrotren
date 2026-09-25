@@ -1,4 +1,3 @@
-jsx
 import React, { useState } from 'react';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
 import { ExternalLink, Play, ChevronDown } from 'lucide-react';
@@ -144,3 +143,4 @@ const Music = () => {
 };
 
 export default Music;
+
