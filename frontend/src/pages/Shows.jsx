@@ -1,3 +1,4 @@
+jsx
 import React from 'react';
 import { logos } from '../mock/mockData';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
@@ -18,6 +19,11 @@ const Shows = () => {
     return groups;
   }, {});
 
+Object.values(groupedShows).forEach((shows) => {
+  shows.sort((a, b) => {
+    return new Date(a.date) - new Date(b.date);
+  });
+});
   const years = Object.keys(groupedShows).sort(
     (a, b) => Number(a) - Number(b)
   );
@@ -34,7 +40,7 @@ const Shows = () => {
 
           <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-8">
+          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-8">
             No te pierdas nuestras próximas presentaciones en vivo. ¡Nos vemos en el escenario!
           </p>
         </div>
@@ -59,7 +65,7 @@ const Shows = () => {
 
               {/* Año */}
               <div className="mb-8">
-                <h2 className="text-4xl font-bold text-purple-400 mb-2">
+                <h2 className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
                   {year}
                 </h2>
 
@@ -73,7 +79,7 @@ const Shows = () => {
                   {groupedShows[year].map((show) => (
                     <div
                       key={show.id}
-                      className="group relative border border-gray-800 rounded-lg p-6 bg-gradient-to-br from-gray-900 to-black hover:border-purple-500 transition-all hover:scale-[1.02]"
+                      className="group relative border border-gray-800 rounded-lg p-4 md:p-6 bg-gradient-to-br from-gray-900 to-black hover:border-purple-500 transition-all hover:scale-[1.02]"
                     >
 
                       {/* Marco gótico superior */}
@@ -82,9 +88,9 @@ const Shows = () => {
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 
                         {/* Fecha */}
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-3 md:gap-4">
 
-                          <div className="w-14 h-14 bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:bg-purple-600/50 transition-colors relative overflow-hidden">
+                          <div className="w-11 h-11 md:w-14 md:h-14 bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:bg-purple-600/50 transition-colors relative overflow-hidden">
 
                             <Calendar
                               className="text-purple-400 relative z-10"
@@ -100,7 +106,7 @@ const Shows = () => {
                           </div>
 
                           <div>
-                            <p className="text-2xl font-bold text-white">
+                            <p className="text-lg md:text-2xl font-bold text-white">
                               {new Date(
                                 `${show.date}T00:00:00`
                               ).toLocaleDateString('es-AR', {
@@ -124,19 +130,24 @@ const Shows = () => {
                         </div>
 
                         {/* Venue */}
-                        <div className="flex items-center gap-3 text-gray-300">
+                        <div className="flex items-start gap-3 text-gray-300">
 
                           <MapPin
-                            className="text-purple-400"
+                            className="text-purple-400 mt-1 flex-shrink-0"
                             size={24}
                           />
 
-                          <p className="text-xl font-semibold">
-                            {show.venue}
+                          <div>
+                            <p className="text-base md:text-xl font-semibold">
+                              {show.venue}
+                            </p>
 
-                            {show.address &&
-                              ` (${show.address})`}
-                          </p>
+                            {show.address && (
+                              <p className="text-sm md:text-base text-gray-400 mt-1">
+                                {show.address}
+                              </p>
+                            )}
+                          </div>
 
                         </div>
 

@@ -1,3 +1,4 @@
+jsx
 import React, { useCallback, useEffect, useState } from 'react';
 import { logos } from '../mock/mockData';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
@@ -87,7 +88,7 @@ const Shop = () => {
 
           <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-8">
+          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-8">
             Conseguí productos oficiales de Astrotrén. Remeras, gorras y más.
           </p>
         </div>
@@ -106,7 +107,7 @@ const Shop = () => {
 
         {/* Grid de productos */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-8">
 
             {merchandise.map((product) => (
               <div
@@ -141,21 +142,21 @@ const Shop = () => {
                     />
                   )}
 
-                  <span className="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-full bg-black/75 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-purple-200 border border-purple-500/50 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="absolute bottom-2 right-2 md:bottom-3 md:right-3 inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-black/75 px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-semibold uppercase tracking-wider text-purple-200 border border-purple-500/50 opacity-0 group-hover:opacity-100 transition-opacity">
                     Ampliar
                     <ExternalLink size={14} />
                   </span>
                 </button>
 
                 {/* Información del producto */}
-                <div className="p-6">
+                <div className="p-4 md:p-6">
                   <div className="flex items-start justify-between mb-2">
 
-                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
                       {product.name}
                     </h3>
 
-                    <div className="w-10 h-10 bg-purple-900/30 rounded-full flex items-center justify-center flex-shrink-0 ml-2 relative overflow-hidden">
+                    <div className="w-9 h-9 md:w-10 md:h-10 bg-purple-900/30 rounded-full flex items-center justify-center flex-shrink-0 ml-2 relative overflow-hidden">
                       <ShoppingBag className="text-purple-400 relative z-10" size={20} />
 
                       <img
@@ -173,7 +174,7 @@ const Shop = () => {
 
                   <div className="flex items-center justify-between">
 
-                    <p className="text-2xl font-bold text-purple-400">
+                    <p className="text-xl md:text-2xl font-bold text-purple-400">
                       ${Number(product.price).toLocaleString('es-AR')}
                     </p>
 
@@ -196,23 +197,23 @@ const Shop = () => {
 
         {/* Nota de contacto */}
         <div className="mt-16 text-center">
-          <div className="border border-purple-900/50 rounded-lg p-8 max-w-2xl mx-auto bg-gradient-to-br from-purple-900/10 to-black">
+          <div className="border border-purple-900/50 rounded-lg p-5 md:p-8 max-w-2xl mx-auto bg-gradient-to-br from-purple-900/10 to-black">
 
-            <p className="text-xl text-gray-300 mb-4">
+            <p className="text-lg md:text-xl text-gray-300 mb-4">
               ¿Querés comprar algún producto?
             </p>
 
-            <p className="text-gray-400 mb-6">
+            <p className="text-sm md:text-base text-gray-400 mb-6">
               Contactanos por WhatsApp, Instagram o email para realizar tu pedido.
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-3 md:gap-4 justify-center">
 
               <a
                 href="https://api.whatsapp.com/send/?phone=5491155710860"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105"
+                className="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105"
               >
                 WhatsApp
               </a>
@@ -221,14 +222,14 @@ const Shop = () => {
                 href="https://www.instagram.com/astrotren.gdln/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105"
               >
                 Instagram
               </a>
 
               <a
                 href="mailto:astrotrengdln@gmail.com"
-                className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105"
+                className="bg-gray-700 hover:bg-gray-600 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105"
               >
                 Email
               </a>

@@ -1,3 +1,4 @@
+jsx
 import React, { useState } from 'react';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
 import { X } from 'lucide-react';
@@ -9,6 +10,7 @@ const Gallery = () => {
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
       <div className="container mx-auto px-4">
+
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
@@ -17,7 +19,7 @@ const Gallery = () => {
 
           <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-8">
+          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-8">
             Momentos capturados en el escenario y detrás de él. La esencia visual de Astrotrén.
           </p>
         </div>
@@ -36,7 +38,7 @@ const Gallery = () => {
 
         {/* Grid de imágenes */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {gallery.map((image) => (
               <div
                 key={image.id}
