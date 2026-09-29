@@ -1,6 +1,7 @@
 import React from 'react';
 import { socialLinks, logos } from '../mock/mockData';
 import { Instagram, Facebook, Music2, Mail, Phone, ExternalLink } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   return (
