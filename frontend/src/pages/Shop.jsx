@@ -11,6 +11,7 @@ import {
   ZoomIn,
   ZoomOut,
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Shop = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -77,6 +78,11 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
+      <SEO
+        title="Tienda - Astrotrén"
+        description="Conseguí merchandising oficial de Astrotrén: remeras, gorras y otros productos de la banda. Consultá disponibilidad y realizá tu pedido."
+        url="https://astrotren.vercel.app/shop"
+      />
       <div className="container mx-auto px-4">
 
         {/* Header */}

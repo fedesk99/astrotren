@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
 import { X } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -8,6 +9,11 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
+      <SEO
+        title="Galería - Astrotrén"
+        description="Galería de fotos de Astrotrén: presentaciones en vivo, escenarios y momentos de la banda dentro y fuera del escenario."
+        url="https://astrotren.vercel.app/gallery"
+      />
       <div className="container mx-auto px-4">
 
         {/* Header */}

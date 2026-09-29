@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Music, Calendar, ShoppingBag } from 'lucide-react';
 import { bandInfo, logos, shows as fallbackShows } from '../mock/mockData';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
+import SEO from '../components/SEO';
 
 const Home = () => {
 
@@ -16,6 +17,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen text-white">
+            <SEO
+              title="Astrotrén - Página Oficial"
+              description="Astrotrén, banda de Heavy Metal y Hard Rock de Argentina. Escuchá nuestra música, conocé próximos shows, mirá fotos y visitá nuestra tienda oficial."
+              url="https://astrotren.vercel.app/"
+            />
       {/* Hero Section con partículas */}
       <section className="min-h-[calc(100vh-80px)] mt-20 overflow-hidden">
         {/* Contenido principal */}

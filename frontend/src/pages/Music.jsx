@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
 import { ExternalLink, Play, ChevronDown } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Music = () => {
   const [expandedPlaylist, setExpandedPlaylist] = useState(null);
@@ -12,6 +13,11 @@ const Music = () => {
 
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
+      <SEO
+        title="Música - Astrotrén"
+        description="Escuchá la música de Astrotrén, banda de Heavy Metal, Hard Rock y Punk de Argentina. Encontrá demos, grabaciones en vivo, versiones acústicas y nuestras producciones musicales."
+        url="https://astrotren.vercel.app/music"
+      />
       <div className="container mx-auto px-4">
 
         {/* Header */}

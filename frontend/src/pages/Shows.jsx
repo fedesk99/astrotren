@@ -2,6 +2,7 @@ import React from 'react';
 import { logos } from '../mock/mockData';
 import { useSupabaseContent } from '../hooks/useSupabaseContent';
 import { Calendar, MapPin } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Shows = () => {
   const { items: showItems, loading, error } = useSupabaseContent('shows');
@@ -29,6 +30,11 @@ Object.values(groupedShows).forEach((shows) => {
 
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
+      <SEO
+        title="Shows - Astrotrén"
+        description="Consultá las próximas fechas y presentaciones en vivo de Astrotrén. Mirá dónde y cuándo tocamos y contactanos para llevar la banda a tu evento."
+        url="https://astrotren.vercel.app/shows"
+      />
       <div className="container mx-auto px-4">
 
         {/* Header */}

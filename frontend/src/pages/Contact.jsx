@@ -5,6 +5,11 @@ import { Instagram, Facebook, Music2, Mail, Phone, ExternalLink } from 'lucide-r
 const Contact = () => {
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
+      <SEO
+        title="Contacto - Astrotrén"
+        description="Contactá a Astrotrén, banda de Heavy Metal, Hard Rock y Punk de Argentina. Consultas, contrataciones, eventos y contacto con la banda."
+        url="https://astrotren.vercel.app/contact"
+      />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
