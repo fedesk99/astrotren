@@ -85,7 +85,7 @@ const Home = () => {
           </p>
 
           {/* Género y origen */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12 text-purple-400 font-medium animate-fade-in-delay-2">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-10 text-purple-400 font-medium animate-fade-in-delay-2">
             <span className="uppercase tracking-widest text-sm">
               {bandInfo.genre}
             </span>
@@ -139,7 +139,7 @@ const Home = () => {
 
           {/* Próximo show destacado */}
           {nextShow && (
-            <article className="mt-16 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
+            <article className="mt-10 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
 
               <p className="text-sm uppercase tracking-widest text-purple-400 mb-2">
                 Próximo Show
