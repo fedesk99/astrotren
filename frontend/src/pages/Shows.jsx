@@ -19,11 +19,12 @@ const Shows = () => {
     return groups;
   }, {});
 
-Object.values(groupedShows).forEach((shows) => {
-  shows.sort((a, b) => {
-    return new Date(a.date) - new Date(b.date);
+  Object.values(groupedShows).forEach((shows) => {
+    shows.sort((a, b) => {
+      return new Date(a.date) - new Date(b.date);
+    });
   });
-});
+
   const years = Object.keys(groupedShows).sort(
     (a, b) => Number(a) - Number(b)
   );
@@ -35,46 +36,68 @@ Object.values(groupedShows).forEach((shows) => {
         description="Consultá las próximas fechas y presentaciones en vivo de Astrotrén. Mirá dónde y cuándo tocamos y contactanos para llevar la banda a tu evento."
         url="https://astrotren.vercel.app/shows"
       />
+
       <div className="container mx-auto px-4">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
+        <header className="text-center mb-16">
+          <h1
+            id="shows-title"
+            className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title"
+          >
             Shows
           </h1>
 
-          <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
+          <div
+            className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"
+            aria-hidden="true"
+          ></div>
 
           <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-8">
             No te pierdas nuestras próximas presentaciones en vivo. ¡Nos vemos en el escenario!
           </p>
-        </div>
+        </header>
 
         {loading && (
-          <p className="mb-6 text-center text-sm text-gray-500">
+          <p
+            className="mb-6 text-center text-sm text-gray-500"
+            role="status"
+          >
             Cargando shows…
           </p>
         )}
 
         {error && (
-          <p className="mb-6 text-center text-sm text-red-400">
+          <p
+            className="mb-6 text-center text-sm text-red-400"
+            role="alert"
+          >
             No se pudieron cargar los shows.
           </p>
         )}
 
         {/* Shows por año */}
-        <div className="max-w-4xl mx-auto space-y-12">
+        <section
+          className="max-w-4xl mx-auto space-y-12"
+          aria-labelledby="shows-title"
+        >
 
           {years.map((year) => (
-            <div key={year}>
+            <section key={year} aria-labelledby={`year-${year}`}>
 
               {/* Año */}
               <div className="mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                <h2
+                  id={`year-${year}`}
+                  className="text-3xl md:text-4xl font-bold text-purple-400 mb-2"
+                >
                   {year}
                 </h2>
 
-                <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+                <div
+                  className="h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-600"
+                  aria-hidden="true"
+                ></div>
               </div>
 
               {/* Fechas */}
@@ -82,20 +105,26 @@ Object.values(groupedShows).forEach((shows) => {
                 <div className="space-y-4">
 
                   {groupedShows[year].map((show) => (
-                    <div
+                    <article
                       key={show.id}
                       className="group relative border border-gray-800 rounded-lg p-4 md:p-6 bg-gradient-to-br from-gray-900 to-black hover:border-purple-500 transition-all hover:scale-[1.02]"
                     >
 
                       {/* Marco gótico superior */}
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div
+                        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-hidden="true"
+                      ></div>
 
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 
                         {/* Fecha */}
                         <div className="flex items-center gap-3 md:gap-4">
 
-                          <div className="w-11 h-11 md:w-14 md:h-14 bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:bg-purple-600/50 transition-colors relative overflow-hidden">
+                          <div
+                            className="w-11 h-11 md:w-14 md:h-14 bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:bg-purple-600/50 transition-colors relative overflow-hidden"
+                            aria-hidden="true"
+                          >
 
                             <Calendar
                               className="text-purple-400 relative z-10"
@@ -140,6 +169,7 @@ Object.values(groupedShows).forEach((shows) => {
                           <MapPin
                             className="text-purple-400 mt-1 flex-shrink-0"
                             size={24}
+                            aria-hidden="true"
                           />
 
                           <div>
@@ -157,7 +187,7 @@ Object.values(groupedShows).forEach((shows) => {
                         </div>
 
                       </div>
-                    </div>
+                    </article>
                   ))}
 
                 </div>
@@ -169,13 +199,16 @@ Object.values(groupedShows).forEach((shows) => {
                 </div>
               )}
 
-            </div>
+            </section>
           ))}
 
-        </div>
+        </section>
 
         {/* Call to action */}
-        <div className="mt-16 text-center">
+        <section
+          className="mt-16 text-center"
+          aria-label="Contrataciones"
+        >
           <div className="border border-purple-900/50 rounded-lg p-8 max-w-2xl mx-auto bg-gradient-to-br from-purple-900/10 to-black">
 
             <p className="text-xl text-gray-300 mb-4">
@@ -190,7 +223,7 @@ Object.values(groupedShows).forEach((shows) => {
             </a>
 
           </div>
-        </div>
+        </section>
 
       </div>
     </div>
@@ -198,4 +231,3 @@ Object.values(groupedShows).forEach((shows) => {
 };
 
 export default Shows;
-

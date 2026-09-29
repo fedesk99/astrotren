@@ -13,11 +13,13 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 🔒 Bloquear scroll cuando el menú está abierto
+  // Bloquear scroll cuando el menú está abierto
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -39,22 +41,24 @@ const Header = () => {
 
   return (
     <>
-      {/* 🌌 OVERLAY */}
+      {/* Overlay */}
       <div
         onClick={() => setIsMobileMenuOpen(false)}
         className={`fixed inset-0 bg-black/80 backdrop-blur-md z-40 lg:hidden 
         transition-opacity duration-250 ease-out
         ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+        aria-hidden="true"
       />
 
-      {/* 🚀 DRAWER */}
-      <div
+      {/* Drawer */}
+      <aside
+        id="mobile-navigation"
+        aria-label="Menú de navegación móvil"
         className={`fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl 
         z-50 transform transition-all duration-300 ease-out lg:hidden
-        ${isMobileMenuOpen ? 
-          'translate-x-0 shadow-[-10px_0_40px_rgba(168,85,247,0.35)]' 
-          : 
-          'translate-x-full shadow-none'
+        ${isMobileMenuOpen
+          ? 'translate-x-0 shadow-[-10px_0_40px_rgba(168,85,247,0.35)]'
+          : 'translate-x-full shadow-none'
         }`}
       >
         {/* Header del Drawer */}
@@ -62,13 +66,25 @@ const Header = () => {
           <span className="text-purple-400 font-bold tracking-wider uppercase">
             Astrotrén
           </span>
-          <button onClick={() => setIsMobileMenuOpen(false)}>
-            <X size={26} className="text-white hover:text-purple-400 transition-colors" />
+
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Cerrar menú"
+            className="text-white hover:text-purple-400 transition-colors"
+          >
+            <X
+              size={26}
+              aria-hidden="true"
+            />
           </button>
         </div>
 
         {/* Links */}
-        <div className="flex flex-col gap-8 p-8">
+        <nav
+          className="flex flex-col gap-8 p-8"
+          aria-label="Navegación móvil"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -83,10 +99,10 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-        </div>
-      </div>
+        </nav>
+      </aside>
 
-      {/* 🌟 HEADER NORMAL */}
+      {/* Header normal */}
       <header
         className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
           isScrolled
@@ -94,9 +110,17 @@ const Header = () => {
             : 'bg-transparent'
         }`}
       >
-        <nav className="container mx-auto px-4 py-4">
+        <nav
+          className="container mx-auto px-4 py-4"
+          aria-label="Navegación principal"
+        >
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center">
+
+            <Link
+              to="/"
+              className="flex items-center"
+              aria-label="Ir al inicio de Astrotrén"
+            >
               <img
                 src={logos.isologo}
                 alt="Astrotrén"
@@ -123,11 +147,19 @@ const Header = () => {
 
             {/* Botón mobile */}
             <button
+              type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden text-white p-2 hover:text-purple-400 transition-colors"
+              aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
-              <Menu size={26} />
+              <Menu
+                size={26}
+                aria-hidden="true"
+              />
             </button>
+
           </div>
         </nav>
       </header>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { lyrics, logos } from '../mock/mockData';
 import { Music } from 'lucide-react';
 import {
@@ -12,52 +12,85 @@ const Lyrics = () => {
   return (
     <div className="min-h-screen text-white pt-24 pb-16">
       <div className="container mx-auto px-4">
+
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
+        <header className="text-center mb-16">
+          <h1
+            id="lyrics-title"
+            className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title"
+          >
             Letras
           </h1>
-          <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
+
+          <div
+            className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"
+            aria-hidden="true"
+          ></div>
+
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-8">
             Explorá las letras de nuestras canciones y adentrarte en el universo lírico de Astrotrén.
           </p>
-        </div>
+        </header>
 
         {/* Listado de letras con Accordion */}
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+        <section
+          className="max-w-4xl mx-auto"
+          aria-labelledby="lyrics-title"
+        >
+          <Accordion
+            type="single"
+            collapsible
+            className="space-y-4"
+          >
             {lyrics.map((song) => (
-              <AccordionItem
-                key={song.id}
-                value={`song-${song.id}`}
-                className="border border-gray-800 rounded-lg bg-gradient-to-br from-gray-900 to-black overflow-hidden hover:border-purple-500 transition-colors"
-              >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline group">
-                  <div className="flex items-center gap-4 w-full">
-                    <div className="w-12 h-12 bg-purple-900/30 rounded-full flex items-center justify-center group-hover:bg-purple-600/50 transition-colors flex-shrink-0 relative overflow-hidden">
-                      <Music className="text-purple-400 relative z-10" size={20} />
-                      <img src={logos.isologo} alt="" className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2" />
+              <article key={song.id}>
+                <AccordionItem
+                  value={`song-${song.id}`}
+                  className="border border-gray-800 rounded-lg bg-gradient-to-br from-gray-900 to-black overflow-hidden hover:border-purple-500 transition-colors"
+                >
+                  <AccordionTrigger className="px-6 py-4 hover:no-underline group">
+                    <div className="flex items-center gap-4 w-full">
+
+                      <div
+                        className="w-12 h-12 bg-purple-900/30 rounded-full flex items-center justify-center group-hover:bg-purple-600/50 transition-colors flex-shrink-0 relative overflow-hidden"
+                        aria-hidden="true"
+                      >
+                        <Music
+                          className="text-purple-400 relative z-10"
+                          size={20}
+                        />
+
+                        <img
+                          src={logos.isologo}
+                          alt=""
+                          className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2"
+                        />
+                      </div>
+
+                      <div className="text-left flex-1">
+                        <h2 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                          {song.title}
+                        </h2>
+                      </div>
+
                     </div>
-                    <div className="text-left flex-1">
-                      <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
-                        {song.title}
-                      </h3>
+                  </AccordionTrigger>
+
+                  <AccordionContent className="px-6 pb-6">
+                    <div className="border-t border-gray-800 pt-6 mt-2">
+                      <div className="bg-black/50 p-6 rounded-lg border border-gray-800">
+                        <pre className="whitespace-pre-wrap font-sans text-gray-300 leading-relaxed">
+                          {song.lyrics}
+                        </pre>
+                      </div>
                     </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <div className="border-t border-gray-800 pt-6 mt-2">
-                    <div className="bg-black/50 p-6 rounded-lg border border-gray-800">
-                      <pre className="whitespace-pre-wrap font-sans text-gray-300 leading-relaxed">
-                        {song.lyrics}
-                      </pre>
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
+                  </AccordionContent>
+                </AccordionItem>
+              </article>
             ))}
           </Accordion>
-        </div>
+        </section>
+
       </div>
     </div>
   );

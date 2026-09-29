@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Background from './components/Background';
@@ -14,10 +14,21 @@ import Contact from './pages/Contact';
 import Admin from './pages/admin/Admin';
 import './App.css';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function PublicSite() {
   return (
     <>
       <Header />
+
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,6 +41,7 @@ function PublicSite() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+
       <Footer />
     </>
   );
@@ -38,7 +50,10 @@ function PublicSite() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <Background />
+
       <div className="App relative z-10 min-h-screen flex flex-col">
         <Routes>
           <Route path="/admin/*" element={<Admin />} />

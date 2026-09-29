@@ -138,6 +138,130 @@ a:active {
   }
 }
 
+.star-twinkle {
+  animation: star-twinkle var(--twinkle-duration) ease-in-out var(--twinkle-delay) infinite;
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.8);
+  }
+}
+
+/* Destello ocasional de estrellas */
+.star-flare {
+  position: relative;
+  animation: star-flare 1.5s ease-in-out forwards;
+}
+
+/* Rayo vertical */
+.star-flare::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 66px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.25);
+  transform-origin: center;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.9) 45%,
+    rgba(255, 255, 255, 0.9) 55%,
+    transparent
+  );
+  filter: blur(0.3px);
+  animation: star-flare-rays 1.5s ease-in-out forwards;
+}
+
+/* Rayo horizontal */
+.star-flare::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 66px;
+  height: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.25);
+  transform-origin: center;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.9) 45%,
+    rgba(255, 255, 255, 0.9) 55%,
+    transparent
+  );
+  filter: blur(0.3px);
+  animation: star-flare-rays 1.5s ease-in-out forwards;
+}
+
+@keyframes star-flare {
+  0% {
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+
+  30% {
+    opacity: 0.84;
+    filter: brightness(1.05);
+  }
+
+  55% {
+    opacity: 0.92;
+    filter: brightness(1.25);
+  }
+
+  70% {
+    opacity: 0.88;
+    filter: brightness(1.15);
+  }
+
+  100% {
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+}
+
+@keyframes star-flare-rays {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+  }
+
+  30% {
+    opacity: 0.04;
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+
+  55% {
+    opacity: 0.28;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  70% {
+    opacity: 0.12;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+  }
+}
+
+
 /* Estilo títulos principales */
 .page-title {
   text-shadow:

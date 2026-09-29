@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Music, Calendar, ShoppingBag } from 'lucide-react';
 import { bandInfo, logos, shows as fallbackShows } from '../mock/mockData';
@@ -7,25 +7,64 @@ import SEO from '../components/SEO';
 
 const Home = () => {
 
-  const { items: showItems } = useSupabaseContent('shows', fallbackShows.flatMap((year) => year.dates).map((item, index) => {
-    const [day, monthName, year] = item.date.split(' ');
-    const months = { Enero:'01', Febrero:'02', Marzo:'03', Abril:'04', Mayo:'05', Junio:'06', Julio:'07', Agosto:'08', Septiembre:'09', Octubre:'10', Noviembre:'11', Diciembre:'12' };
-    return { id:index+1, date:`${year}-${months[monthName]}-${day.padStart(2,'0')}`, time:'', venue:item.venue, address:item.address || '', position:index };
-  }));
-  const today = new Date(); today.setHours(0,0,0,0);
-  const nextShow = showItems.map(show => ({...show, parsedDate:new Date(`${show.date}T00:00:00`)})).sort((a,b)=>a.parsedDate-b.parsedDate).find(show=>show.parsedDate>=today);
+  const { items: showItems } = useSupabaseContent(
+    'shows',
+    fallbackShows
+      .flatMap((year) => year.dates)
+      .map((item, index) => {
+        const [day, monthName, year] = item.date.split(' ');
+        const months = {
+          Enero: '01',
+          Febrero: '02',
+          Marzo: '03',
+          Abril: '04',
+          Mayo: '05',
+          Junio: '06',
+          Julio: '07',
+          Agosto: '08',
+          Septiembre: '09',
+          Octubre: '10',
+          Noviembre: '11',
+          Diciembre: '12',
+        };
+
+        return {
+          id: index + 1,
+          date: `${year}-${months[monthName]}-${day.padStart(2, '0')}`,
+          time: '',
+          venue: item.venue,
+          address: item.address || '',
+          position: index,
+        };
+      })
+  );
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const nextShow = showItems
+    .map((show) => ({
+      ...show,
+      parsedDate: new Date(`${show.date}T00:00:00`),
+    }))
+    .sort((a, b) => a.parsedDate - b.parsedDate)
+    .find((show) => show.parsedDate >= today);
 
   return (
     <div className="min-h-screen text-white">
-            <SEO
-              title="Astrotrén - Página Oficial"
-              description="Astrotrén, banda de Heavy Metal y Hard Rock de Argentina. Escuchá nuestra música, conocé próximos shows, mirá fotos y visitá nuestra tienda oficial."
-              url="https://astrotren.vercel.app/"
-            />
+
+      <SEO
+        title="Astrotrén - Página Oficial"
+        description="Astrotrén, banda de Heavy Metal y Hard Rock de Argentina. Escuchá nuestra música, conocé próximos shows, mirá fotos y visitá nuestra tienda oficial."
+        url="https://astrotren.vercel.app/"
+      />
+
       {/* Hero Section con partículas */}
-      <section className="min-h-[calc(100vh-80px)] mt-20 overflow-hidden">
+      <header className="min-h-[calc(100vh-80px)] mt-20 overflow-hidden">
+
         {/* Contenido principal */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+
           {/* Logo principal */}
           <div className="mb-8 animate-fade-in">
             <img
@@ -35,6 +74,11 @@ const Home = () => {
             />
           </div>
 
+          {/* Título semántico */}
+          <h1 className="sr-only">
+            Astrotrén
+          </h1>
+
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-gray-300 mb-4 font-light tracking-wide animate-fade-in-delay">
             {bandInfo.tagline}
@@ -42,96 +86,211 @@ const Home = () => {
 
           {/* Género y origen */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12 text-purple-400 font-medium animate-fade-in-delay-2">
-            <span className="uppercase tracking-widest text-sm">{bandInfo.genre}</span>
-            <span className="hidden md:block text-gray-600">•</span>
-            <span className="uppercase tracking-widest text-sm">{bandInfo.origin}</span>
+            <span className="uppercase tracking-widest text-sm">
+              {bandInfo.genre}
+            </span>
+
+            <span
+              className="hidden md:block text-gray-600"
+              aria-hidden="true"
+            >
+              •
+            </span>
+
+            <span className="uppercase tracking-widest text-sm">
+              {bandInfo.origin}
+            </span>
           </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-3">
+
             <Link
               to="/music"
               className="group bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              <Music size={20} />
+              <Music
+                size={20}
+                aria-hidden="true"
+              />
+
               Escuchar Música
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-transform"
+                aria-hidden="true"
+              />
             </Link>
+
             <Link
               to="/shows"
               className="group bg-transparent border-2 border-purple-500 hover:bg-purple-500/10 text-white px-8 py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              <Calendar size={20} />
+              <Calendar
+                size={20}
+                aria-hidden="true"
+              />
+
               Próximos Shows
             </Link>
+
           </div>
 
           {/* Próximo show destacado */}
           {nextShow && (
-            <div className="mt-16 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
-              <p className="text-sm uppercase tracking-widest text-purple-400 mb-2">Próximo Show</p>
+            <article className="mt-16 p-6 border border-purple-900/50 rounded-lg bg-black/50 backdrop-blur-sm animate-fade-in-delay-4">
+
+              <p className="text-sm uppercase tracking-widest text-purple-400 mb-2">
+                Próximo Show
+              </p>
+
               <p className="text-2xl font-bold text-white mb-1 whitespace-pre-line">
-                {nextShow.parsedDate.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' })}{nextShow.time ? ` - ${nextShow.time}` : ''}
+                {nextShow.parsedDate.toLocaleDateString(
+                  'es-AR',
+                  {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                  }
+                )}
+
+                {nextShow.time ? ` - ${nextShow.time}` : ''}
               </p>
+
               <p className="text-lg text-gray-400">
-                {nextShow.venue}{nextShow.address ? ` (${nextShow.address})` : ''}
+                {nextShow.venue}
+                {nextShow.address ? ` (${nextShow.address})` : ''}
               </p>
-            </div>
+
+            </article>
           )}
+
         </div>
-      </section>
+      </header>
 
       {/* Sección de características rápidas */}
-      <section className="py-20 bg-transparent">
+      <section
+        className="py-20 bg-transparent"
+        aria-labelledby="home-sections-title"
+      >
         <div className="container mx-auto px-4">
+
+          <h2
+            id="home-sections-title"
+            className="sr-only"
+          >
+            Secciones de Astrotrén
+          </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
             {/* Música */}
-            <Link
-              to="/music"
-              className="group p-8 border border-gray-800 rounded-lg hover:border-purple-500 transition-all hover:scale-105 bg-black/50"
-            >
-              <div className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600/50 transition-colors relative overflow-hidden">
-                <Music size={32} className="text-purple-400 relative z-10" />
-                <img src={logos.isologo} alt="" className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-white">Música</h3>
-              <p className="text-gray-400">
-                Descubrí nuestros demos, grabaciones en vivo y versiones acústicas.
-              </p>
-            </Link>
+            <article>
+              <Link
+                to="/music"
+                className="group block p-8 border border-gray-800 rounded-lg hover:border-purple-500 transition-all hover:scale-105 bg-black/50"
+              >
+
+                <div
+                  className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600/50 transition-colors relative overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <Music
+                    size={32}
+                    className="text-purple-400 relative z-10"
+                  />
+
+                  <img
+                    src={logos.isologo}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2"
+                  />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-2 text-white">
+                  Música
+                </h3>
+
+                <p className="text-gray-400">
+                  Descubrí nuestros demos, grabaciones en vivo y versiones acústicas.
+                </p>
+
+              </Link>
+            </article>
 
             {/* Shows */}
-            <Link
-              to="/shows"
-              className="group p-8 border border-gray-800 rounded-lg hover:border-purple-500 transition-all hover:scale-105 bg-black/50"
-            >
-              <div className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600/50 transition-colors relative overflow-hidden">
-                <Calendar size={32} className="text-purple-400 relative z-10" />
-                <img src={logos.isologo} alt="" className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-white">Shows</h3>
-              <p className="text-gray-400">
-                Mirá dónde vamos a tocar próximamente y no te pierdas ningún show.
-              </p>
-            </Link>
+            <article>
+              <Link
+                to="/shows"
+                className="group block p-8 border border-gray-800 rounded-lg hover:border-purple-500 transition-all hover:scale-105 bg-black/50"
+              >
+
+                <div
+                  className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600/50 transition-colors relative overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <Calendar
+                    size={32}
+                    className="text-purple-400 relative z-10"
+                  />
+
+                  <img
+                    src={logos.isologo}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2"
+                  />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-2 text-white">
+                  Shows
+                </h3>
+
+                <p className="text-gray-400">
+                  Mirá dónde vamos a tocar próximamente y no te pierdas ningún show.
+                </p>
+
+              </Link>
+            </article>
 
             {/* Tienda */}
-            <Link
-              to="/shop"
-              className="group p-8 border border-gray-800 rounded-lg hover:border-purple-500 transition-all hover:scale-105 bg-black/50"
-            >
-              <div className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600/50 transition-colors relative overflow-hidden">
-                <ShoppingBag size={32} className="text-purple-400 relative z-10" />
-                <img src={logos.isologo} alt="" className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-white">Tienda</h3>
-              <p className="text-gray-400">
-                Conseguí remeras, gorras y otros productos oficiales de Astrotrén.
-              </p>
-            </Link>
+            <article>
+              <Link
+                to="/shop"
+                className="group block p-8 border border-gray-800 rounded-lg hover:border-purple-500 transition-all hover:scale-105 bg-black/50"
+              >
+
+                <div
+                  className="w-16 h-16 bg-purple-900/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-purple-600/50 transition-colors relative overflow-hidden"
+                  aria-hidden="true"
+                >
+                  <ShoppingBag
+                    size={32}
+                    className="text-purple-400 relative z-10"
+                  />
+
+                  <img
+                    src={logos.isologo}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-20 transition-opacity p-2"
+                  />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-2 text-white">
+                  Tienda
+                </h3>
+
+                <p className="text-gray-400">
+                  Conseguí remeras, gorras y otros productos oficiales de Astrotrén.
+                </p>
+
+              </Link>
+            </article>
+
           </div>
         </div>
       </section>
+
     </div>
   );
 };

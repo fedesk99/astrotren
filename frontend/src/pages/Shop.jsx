@@ -83,45 +83,64 @@ const Shop = () => {
         description="Conseguí merchandising oficial de Astrotrén: remeras, gorras y otros productos de la banda. Consultá disponibilidad y realizá tu pedido."
         url="https://astrotren.vercel.app/shop"
       />
+
       <div className="container mx-auto px-4">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title">
+        <header className="text-center mb-16">
+          <h1
+            id="shop-title"
+            className="text-lg md:text-7xl font-black tracking-wider text-[#3b1d5c] page-title"
+          >
             Tienda
           </h1>
 
-          <div className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"></div>
+          <div
+            className="w-28 h-2 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-600 mx-auto mt-4 rounded-full shadow-lg shadow-purple-900/50"
+            aria-hidden="true"
+          ></div>
 
           <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-8">
             Conseguí productos oficiales de Astrotrén. Remeras, gorras y más.
           </p>
-        </div>
+        </header>
 
         {loading && (
-          <p className="mb-6 text-center text-sm text-gray-500">
+          <p
+            className="mb-6 text-center text-sm text-gray-500"
+            role="status"
+          >
             Cargando tienda…
           </p>
         )}
 
         {error && (
-          <p className="mb-6 text-center text-sm text-red-400">
+          <p
+            className="mb-6 text-center text-sm text-red-400"
+            role="alert"
+          >
             No se pudo cargar la tienda.
           </p>
         )}
 
         {/* Grid de productos */}
-        <div className="max-w-7xl mx-auto">
+        <section
+          className="max-w-7xl mx-auto"
+          aria-labelledby="shop-title"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-8">
 
             {merchandise.map((product) => (
-              <div
+              <article
                 key={product.id}
                 className="group relative border border-gray-800 rounded-lg overflow-hidden bg-gradient-to-br from-gray-900 to-black hover:border-purple-500 transition-all hover:scale-[1.02]"
               >
 
                 {/* Marco gotico superior */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+                <div
+                  className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                  aria-hidden="true"
+                ></div>
 
                 <button
                   type="button"
@@ -147,9 +166,11 @@ const Shop = () => {
                     />
                   )}
 
-                  <span className="absolute bottom-2 right-2 md:bottom-3 md:right-3 inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-black/75 px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-semibold uppercase tracking-wider text-purple-200 border border-purple-500/50 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span
+                    className="absolute bottom-2 right-2 md:bottom-3 md:right-3 inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-black/75 px-2.5 py-1.5 md:px-3 md:py-2 text-xs font-semibold uppercase tracking-wider text-purple-200 border border-purple-500/50 opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
                     Ampliar
-                    <ExternalLink size={14} />
+                    <ExternalLink size={14} aria-hidden="true" />
                   </span>
                 </button>
 
@@ -157,12 +178,18 @@ const Shop = () => {
                 <div className="p-4 md:p-6">
                   <div className="flex items-start justify-between mb-2">
 
-                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                    <h2 className="text-lg md:text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
                       {product.name}
-                    </h3>
+                    </h2>
 
-                    <div className="w-9 h-9 md:w-10 md:h-10 bg-purple-900/30 rounded-full flex items-center justify-center flex-shrink-0 ml-2 relative overflow-hidden">
-                      <ShoppingBag className="text-purple-400 relative z-10" size={20} />
+                    <div
+                      className="w-9 h-9 md:w-10 md:h-10 bg-purple-900/30 rounded-full flex items-center justify-center flex-shrink-0 ml-2 relative overflow-hidden"
+                      aria-hidden="true"
+                    >
+                      <ShoppingBag
+                        className="text-purple-400 relative z-10"
+                        size={20}
+                      />
 
                       <img
                         src={logos.isologo}
@@ -189,24 +216,30 @@ const Shop = () => {
                       className="text-sm text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1"
                     >
                       Ver más
-                      <ExternalLink size={14} />
+                      <ExternalLink size={14} aria-hidden="true" />
                     </button>
 
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
 
           </div>
-        </div>
+        </section>
 
         {/* Nota de contacto */}
-        <div className="mt-16 text-center">
+        <section
+          className="mt-16 text-center"
+          aria-labelledby="shop-contact-title"
+        >
           <div className="border border-purple-900/50 rounded-lg p-5 md:p-8 max-w-2xl mx-auto bg-gradient-to-br from-purple-900/10 to-black">
 
-            <p className="text-lg md:text-xl text-gray-300 mb-4">
+            <h2
+              id="shop-contact-title"
+              className="text-lg md:text-xl text-gray-300 mb-4 font-normal"
+            >
               ¿Querés comprar algún producto?
-            </p>
+            </h2>
 
             <p className="text-sm md:text-base text-gray-400 mb-6">
               Contactanos por WhatsApp, Instagram o email para realizar tu pedido.
@@ -241,7 +274,7 @@ const Shop = () => {
 
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Modal de producto */}
         {selectedProduct && (
@@ -275,7 +308,7 @@ const Shop = () => {
                   className="w-11 h-11 rounded-full border border-gray-700 bg-black/60 text-white flex items-center justify-center hover:border-purple-400 hover:text-purple-300"
                   aria-label="Cerrar"
                 >
-                  <X size={22} />
+                  <X size={22} aria-hidden="true" />
                 </button>
 
               </div>
@@ -304,7 +337,7 @@ const Shop = () => {
                         className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-purple-500/70 bg-black/75 text-white flex items-center justify-center hover:bg-purple-700"
                         aria-label="Ver imagen anterior"
                       >
-                        <ChevronLeft size={26} />
+                        <ChevronLeft size={26} aria-hidden="true" />
                       </button>
 
                       <button
@@ -313,7 +346,7 @@ const Shop = () => {
                         className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-purple-500/70 bg-black/75 text-white flex items-center justify-center hover:bg-purple-700"
                         aria-label="Ver imagen siguiente"
                       >
-                        <ChevronRight size={26} />
+                        <ChevronRight size={26} aria-hidden="true" />
                       </button>
                     </>
                   )}
@@ -327,7 +360,7 @@ const Shop = () => {
                       className="w-10 h-10 rounded-full text-white flex items-center justify-center hover:bg-purple-700 disabled:opacity-40 disabled:hover:bg-transparent"
                       aria-label="Alejar"
                     >
-                      <ZoomOut size={19} />
+                      <ZoomOut size={19} aria-hidden="true" />
                     </button>
 
                     <span className="min-w-14 text-center text-sm font-semibold text-gray-200">
@@ -341,7 +374,7 @@ const Shop = () => {
                       className="w-10 h-10 rounded-full text-white flex items-center justify-center hover:bg-purple-700 disabled:opacity-40 disabled:hover:bg-transparent"
                       aria-label="Acercar"
                     >
-                      <ZoomIn size={19} />
+                      <ZoomIn size={19} aria-hidden="true" />
                     </button>
 
                     <button
@@ -350,7 +383,7 @@ const Shop = () => {
                       className="w-10 h-10 rounded-full text-white flex items-center justify-center hover:bg-purple-700"
                       aria-label="Restablecer zoom"
                     >
-                      <RotateCcw size={18} />
+                      <RotateCcw size={18} aria-hidden="true" />
                     </button>
 
                   </div>
@@ -406,6 +439,7 @@ const Shop = () => {
                   )}
 
                   <button
+                    type="button"
                     onClick={closeProductModal}
                     className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold uppercase tracking-wider text-sm transition-all"
                   >
@@ -424,4 +458,3 @@ const Shop = () => {
 };
 
 export default Shop;
-
