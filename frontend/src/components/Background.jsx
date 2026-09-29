@@ -12,6 +12,7 @@ const Background = () => {
   const scrollYRef = useRef(0);
   const animationFrameRef = useRef(null);
   const flareTimeoutRef = useRef(null);
+  const lastFlareRef = useRef(null);
 
   useEffect(() => {
     const newParticles = Array.from({ length: 80 }, (_, i) => ({
@@ -76,11 +77,12 @@ const Background = () => {
           nextIndex = Math.floor(Math.random() * particles.length);
         } while (
           particles.length > 1 &&
-          nextIndex === activeFlare
+          nextIndex === lastFlareRef.current
         );
 
+        lastFlareRef.current = nextIndex;
         setActiveFlare(nextIndex);
-
+        
         /*
          * El destello dura aproximadamente 1.5 segundos.
          * Después desaparece y comienza nuevamente
